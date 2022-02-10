@@ -2,7 +2,7 @@
 <html>
 <!-- This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2020 Free Software Foundation, Inc.
+Copyright (C) 1991-2021 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -456,6 +456,7 @@ Previous: <a href="GNU-Free-Documentation-License.html#GNU-Free-Documentation-Li
 <tr><td></td><td valign="top"><a href="i386_002dOptions.html#index-_002dmavxscalar_003d-option_002c-x86_002d64">&lsquo;<samp>-mavxscalar=</samp>&rsquo; option, x86-64</a>:</td><td>&nbsp;</td><td valign="top"><a href="i386_002dOptions.html#i386_002dOptions">i386-Options</a></td></tr>
 <tr><td></td><td valign="top"><a href="LM32-Options.html#index-_002dmbarrel_002dshift_002denabled-command_002dline-option_002c-LM32"><code>-mbarrel-shift-enabled</code> command-line option, LM32</a>:</td><td>&nbsp;</td><td valign="top"><a href="LM32-Options.html#LM32-Options">LM32 Options</a></td></tr>
 <tr><td></td><td valign="top"><a href="RX_002dOpts.html#index-_002dmbig_002dendian">&lsquo;<samp>-mbig-endian</samp>&rsquo;</a>:</td><td>&nbsp;</td><td valign="top"><a href="RX_002dOpts.html#RX_002dOpts">RX-Opts</a></td></tr>
+<tr><td></td><td valign="top"><a href="RISC_002dV_002dOptions.html#index-_002dmbig_002dendian-option_002c-RISC_002dV">&lsquo;<samp>-mbig-endian</samp>&rsquo; option, RISC-V</a>:</td><td>&nbsp;</td><td valign="top"><a href="RISC_002dV_002dOptions.html#RISC_002dV_002dOptions">RISC-V-Options</a></td></tr>
 <tr><td></td><td valign="top"><a href="i386_002dOptions.html#index-_002dmbig_002dobj-option_002c-i386">&lsquo;<samp>-mbig-obj</samp>&rsquo; option, i386</a>:</td><td>&nbsp;</td><td valign="top"><a href="i386_002dOptions.html#i386_002dOptions">i386-Options</a></td></tr>
 <tr><td></td><td valign="top"><a href="i386_002dOptions.html#index-_002dmbig_002dobj-option_002c-x86_002d64">&lsquo;<samp>-mbig-obj</samp>&rsquo; option, x86-64</a>:</td><td>&nbsp;</td><td valign="top"><a href="i386_002dOptions.html#i386_002dOptions">i386-Options</a></td></tr>
 <tr><td></td><td valign="top"><a href="i386_002dOptions.html#index-_002dmbranches_002dwithin_002d32B_002dboundaries-option_002c-i386">&lsquo;<samp>-mbranches-within-32B-boundaries</samp>&rsquo; option, i386</a>:</td><td>&nbsp;</td><td valign="top"><a href="i386_002dOptions.html#i386_002dOptions">i386-Options</a></td></tr>
@@ -541,6 +542,7 @@ Previous: <a href="GNU-Free-Documentation-License.html#GNU-Free-Documentation-Li
 <tr><td></td><td valign="top"><a href="PDP_002d11_002dOptions.html#index-_002dmlimited_002deis">-mlimited-eis</a>:</td><td>&nbsp;</td><td valign="top"><a href="PDP_002d11_002dOptions.html#PDP_002d11_002dOptions">PDP-11-Options</a></td></tr>
 <tr><td></td><td valign="top"><a href="AVR-Options.html#index-_002dmlink_002drelax-command_002dline-option_002c-AVR"><code>-mlink-relax</code> command-line option, AVR</a>:</td><td>&nbsp;</td><td valign="top"><a href="AVR-Options.html#AVR-Options">AVR Options</a></td></tr>
 <tr><td></td><td valign="top"><a href="RX_002dOpts.html#index-_002dmlittle_002dendian">&lsquo;<samp>-mlittle-endian</samp>&rsquo;</a>:</td><td>&nbsp;</td><td valign="top"><a href="RX_002dOpts.html#RX_002dOpts">RX-Opts</a></td></tr>
+<tr><td></td><td valign="top"><a href="RISC_002dV_002dOptions.html#index-_002dmlittle_002dendian-option_002c-RISC_002dV">&lsquo;<samp>-mlittle-endian</samp>&rsquo; option, RISC-V</a>:</td><td>&nbsp;</td><td valign="top"><a href="RISC_002dV_002dOptions.html#RISC_002dV_002dOptions">RISC-V-Options</a></td></tr>
 <tr><td></td><td valign="top"><a href="M68HC11_002dOpts.html#index-_002dmlong">&lsquo;<samp>-mlong</samp>&rsquo;</a>:</td><td>&nbsp;</td><td valign="top"><a href="M68HC11_002dOpts.html#M68HC11_002dOpts">M68HC11-Opts</a></td></tr>
 <tr><td></td><td valign="top"><a href="XGATE_002dOpts.html#index-_002dmlong-1">&lsquo;<samp>-mlong</samp>&rsquo;</a>:</td><td>&nbsp;</td><td valign="top"><a href="XGATE_002dOpts.html#XGATE_002dOpts">XGATE-Opts</a></td></tr>
 <tr><td></td><td valign="top"><a href="M68HC11_002dOpts.html#index-_002dmlong_002ddouble">&lsquo;<samp>-mlong-double</samp>&rsquo;</a>:</td><td>&nbsp;</td><td valign="top"><a href="M68HC11_002dOpts.html#M68HC11_002dOpts">M68HC11-Opts</a></td></tr>
@@ -2807,6 +2809,7 @@ Previous: <a href="GNU-Free-Documentation-License.html#GNU-Free-Documentation-Li
 <tr><td></td><td valign="top"><a href="TILEPro-Syntax.html#index-TILEPro-syntax">TILEPro syntax</a>:</td><td>&nbsp;</td><td valign="top"><a href="TILEPro-Syntax.html#TILEPro-Syntax">TILEPro Syntax</a></td></tr>
 <tr><td></td><td valign="top"><a href="statistics.html#index-time_002c-total-for-assembly">time, total for assembly</a>:</td><td>&nbsp;</td><td valign="top"><a href="statistics.html#statistics">statistics</a></td></tr>
 <tr><td></td><td valign="top"><a href="Title.html#index-title-directive"><code>title</code> directive</a>:</td><td>&nbsp;</td><td valign="top"><a href="Title.html#Title">Title</a></td></tr>
+<tr><td></td><td valign="top"><a href="Tls_005fcommon.html#index-tls_005fcommon-directive"><code>tls_common</code> directive</a>:</td><td>&nbsp;</td><td valign="top"><a href="Tls_005fcommon.html#Tls_005fcommon">Tls_common</a></td></tr>
 <tr><td></td><td valign="top"><a href="Nios-II-Relocations.html#index-tls_005fgd-directive_002c-Nios-II"><code>tls_gd</code> directive, Nios II</a>:</td><td>&nbsp;</td><td valign="top"><a href="Nios-II-Relocations.html#Nios-II-Relocations">Nios II Relocations</a></td></tr>
 <tr><td></td><td valign="top"><a href="Nios-II-Relocations.html#index-tls_005fie-directive_002c-Nios-II"><code>tls_ie</code> directive, Nios II</a>:</td><td>&nbsp;</td><td valign="top"><a href="Nios-II-Relocations.html#Nios-II-Relocations">Nios II Relocations</a></td></tr>
 <tr><td></td><td valign="top"><a href="Nios-II-Relocations.html#index-tls_005fldm-directive_002c-Nios-II"><code>tls_ldm</code> directive, Nios II</a>:</td><td>&nbsp;</td><td valign="top"><a href="Nios-II-Relocations.html#Nios-II-Relocations">Nios II Relocations</a></td></tr>

@@ -2,7 +2,7 @@
 <html>
 <!-- This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2020 Free Software Foundation, Inc.
+Copyright (C) 1991-2021 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -87,8 +87,8 @@ supported on the CPU specified.  The choices for <var>cpu_type</var> are:
 <tr><td width="20%">&lsquo;<samp>corei7</samp>&rsquo;</td><td width="20%">&lsquo;<samp>l1om</samp>&rsquo;</td><td width="20%">&lsquo;<samp>k1om</samp>&rsquo;</td><td width="20%">&lsquo;<samp>iamcu</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>k6</samp>&rsquo;</td><td width="20%">&lsquo;<samp>k6_2</samp>&rsquo;</td><td width="20%">&lsquo;<samp>athlon</samp>&rsquo;</td><td width="20%">&lsquo;<samp>k8</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>amdfam10</samp>&rsquo;</td><td width="20%">&lsquo;<samp>bdver1</samp>&rsquo;</td><td width="20%">&lsquo;<samp>bdver2</samp>&rsquo;</td><td width="20%">&lsquo;<samp>bdver3</samp>&rsquo;</td></tr>
-<tr><td width="20%">&lsquo;<samp>bdver4</samp>&rsquo;</td><td width="20%">&lsquo;<samp>znver1</samp>&rsquo;</td><td width="20%">&lsquo;<samp>znver2</samp>&rsquo;</td><td width="20%">&lsquo;<samp>btver1</samp>&rsquo;</td></tr>
-<tr><td width="20%">&lsquo;<samp>btver2</samp>&rsquo;</td><td width="20%">&lsquo;<samp>generic32</samp>&rsquo;</td><td width="20%">&lsquo;<samp>generic64</samp>&rsquo;</td></tr>
+<tr><td width="20%">&lsquo;<samp>bdver4</samp>&rsquo;</td><td width="20%">&lsquo;<samp>znver1</samp>&rsquo;</td><td width="20%">&lsquo;<samp>znver2</samp>&rsquo;</td><td width="20%">&lsquo;<samp>znver3</samp>&rsquo;</td></tr>
+<tr><td width="20%">&lsquo;<samp>btver1</samp>&rsquo;</td><td width="20%">&lsquo;<samp>btver2</samp>&rsquo;</td><td width="20%">&lsquo;<samp>generic32</samp>&rsquo;</td><td width="20%">&lsquo;<samp>generic64</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.cmov</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.fxsr</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.mmx</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.sse</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.sse2</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.sse3</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.sse4a</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.ssse3</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.sse4.1</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.sse4.2</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.sse4</samp>&rsquo;</td></tr>
@@ -106,16 +106,20 @@ supported on the CPU specified.  The choices for <var>cpu_type</var> are:
 <tr><td width="20%">&lsquo;<samp>.avx512vbmi</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.avx512_4fmaps</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.avx512_4vnniw</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.avx512_vpopcntdq</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.avx512_vbmi2</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.avx512_vnni</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.avx512_bitalg</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.avx512_bf16</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.avx512_vp2intersect</samp>&rsquo;</td></tr>
+<tr><td width="20%">&lsquo;<samp>.tdx</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.avx_vnni</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.clwb</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.rdpid</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.ptwrite</samp>&rsquo;</td><td width="20%"></td></tr>
 <tr><td width="20%">&lsquo;<samp>.ibt</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.wbnoinvd</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.pconfig</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.waitpkg</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.cldemote</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.shstk</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.gfni</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.vaes</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.vpclmulqdq</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.movdiri</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.movdir64b</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.enqcmd</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.tsxldtrk</samp>&rsquo;</td></tr>
+<tr><td width="20%">&lsquo;<samp>.amx_int8</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.amx_bf16</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.amx_tile</samp>&rsquo;</td></tr>
+<tr><td width="20%">&lsquo;<samp>.kl</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.widekl</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.uintr</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.hreset</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.3dnow</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.3dnowa</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.sse4a</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.sse5</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.syscall</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.rdtscp</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.svme</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.lwp</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.fma4</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.xop</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.cx16</samp>&rsquo;</td></tr>
 <tr><td width="20%">&lsquo;<samp>.padlock</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.clzero</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.mwaitx</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.rdpru</samp>&rsquo;</td></tr>
-<tr><td width="20%">&lsquo;<samp>.mcommit</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.sev_es</samp>&rsquo;</td></tr>
+<tr><td width="20%">&lsquo;<samp>.mcommit</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.sev_es</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.snp</samp>&rsquo;</td><td width="20%">&lsquo;<samp>.invlpgb</samp>&rsquo;</td></tr>
+<tr><td width="20%">&lsquo;<samp>.tlbsync</samp>&rsquo;</td></tr>
 </table>
 
 <p>Apart from the warning, there are only two other effects on

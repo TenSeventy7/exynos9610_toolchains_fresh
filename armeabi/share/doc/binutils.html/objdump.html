@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Copyright (C) 1991-2020 Free Software Foundation, Inc.
+<!-- Copyright (C) 1991-2021 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -197,7 +197,7 @@ for more information on demangling.
 <dt><code>--no-recursion-limit</code></dt>
 <dd><p>Enables or disables a limit on the amount of recursion performed
 whilst demangling strings.  Since the name mangling formats allow for
-an inifinite level of recursion it is possible to create strings whose
+an infinite level of recursion it is possible to create strings whose
 decoding will exhaust the amount of stack space available on the host
 machine, triggering a memory fault.  The limit tries to prevent this
 from happening by restricting recursion to 2048 levels of nesting.
@@ -397,7 +397,7 @@ hexadecimal using <samp>hex</samp>.  By default, the short immediates are
 printed using the decimal representation, while the long immediate
 values are printed as hexadecimal.
 </p>
-<p><samp>cpu=...</samp> allows to enforce a particular ISA when disassembling
+<p><samp>cpu=...</samp> allows one to enforce a particular ISA when disassembling
 instructions, overriding the <samp>-m</samp> value or whatever is in the ELF file.
 This might be useful to select ARC EM or HS ISA, because architecture is same
 for those and disassembler relies on private ELF header data to decide if code
@@ -932,7 +932,7 @@ types.  One looks like this:
 in the symbol table, the <var>sec</var> number is the section number, the
 <var>fl</var> value are the symbol&rsquo;s flag bits, the <var>ty</var> number is the
 symbol&rsquo;s type, the <var>scl</var> number is the symbol&rsquo;s storage class and
-the <var>nx</var> value is the number of auxilary entries associated with
+the <var>nx</var> value is the number of auxiliary entries associated with
 the symbol.  The last two fields are the symbol&rsquo;s value and its name.
 </p>
 <p>The other common output format, usually seen with ELF based files,
@@ -943,7 +943,7 @@ looks like this:
 00000000 g       .text  00000000 fred
 </pre></div>
 
-<p>Here the first number is the symbol&rsquo;s value (sometimes refered to as
+<p>Here the first number is the symbol&rsquo;s value (sometimes referred to as
 its address).  The next field is actually a set of characters and
 spaces indicating the flag bits that are set on the symbol.  These
 characters are described below.  Next is the section with which the

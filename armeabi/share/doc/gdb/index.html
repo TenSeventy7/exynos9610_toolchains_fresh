@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Copyright (C) 1988-2020 Free Software Foundation, Inc.
+<!-- Copyright (C) 1988-2021 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -73,10 +73,10 @@ ul.no-bullet {list-style: none}
 </p>
 <p>This is the Tenth Edition, of <cite>Debugging with
 <small>GDB</small>: the <small>GNU</small> Source-Level Debugger</cite> for <small>GDB</small>
-(GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16))
-Version 10.1.90.20201028-git.
+(GNU Toolchain for the A-profile Architecture 10.3-2021.07 (arm-10.29))
+Version 10.2.90.20210621-git.
 </p>
-<p>Copyright &copy; 1988-2020 Free Software Foundation, Inc.
+<p>Copyright &copy; 1988-2021 Free Software Foundation, Inc.
 </p>
 <p>Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -104,10 +104,10 @@ Next: <a href="Summary.html#Summary" accesskey="n" rel="next">Summary</a> &nbsp;
 <p>This file describes <small>GDB</small>, the <small>GNU</small> symbolic debugger.
 </p>
 <p>This is the Tenth Edition, for <small>GDB</small>
-(GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16))
-Version 10.1.90.20201028-git.
+(GNU Toolchain for the A-profile Architecture 10.3-2021.07 (arm-10.29))
+Version 10.2.90.20210621-git.
 </p>
-<p>Copyright (C) 1988-2020 Free Software Foundation, Inc.
+<p>Copyright (C) 1988-2021 Free Software Foundation, Inc.
 </p>
 <p>This edition of the GDB manual is dedicated to the memory of Fred
 Fish.  Fred was a long-standing contributor to GDB and to Free
@@ -177,7 +177,7 @@ software in general.  We will miss him.
 </td></tr>
 <tr><td align="left" valign="top">&bull; <a href="JIT-Interface.html#JIT-Interface">JIT Interface</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Using the JIT debugging interface.
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="In_002dProcess-Agent.html#In_002dProcess-Agent">In-Process Agent</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">In-Process Agent
+<tr><td align="left" valign="top">&bull; <a href="In_002dprocess-Agent.html#In_002dprocess-Agent">In-process Agent</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">In-process Agent
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 </pre></th></tr><tr><td align="left" valign="top">&bull; <a href="GDB-Bugs.html#GDB-Bugs">GDB Bugs</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Reporting bugs in <small>GDB</small>
@@ -243,7 +243,7 @@ software in general.  We will miss him.
     <ul class="no-bullet">
       <li><a name="toc-Choosing-Files" href="File-Options.html#File-Options">2.1.1 Choosing Files</a></li>
       <li><a name="toc-Choosing-Modes" href="Mode-Options.html#Mode-Options">2.1.2 Choosing Modes</a></li>
-      <li><a name="toc-What-GDB-Does-During-Startup" href="Startup.html#Startup">2.1.3 What <small>GDB</small> Does During Startup</a></li>
+      <li><a name="toc-What-GDB-Does-during-Startup" href="Startup.html#Startup">2.1.3 What <small>GDB</small> Does during Startup</a></li>
     </ul></li>
     <li><a name="toc-Quitting-GDB-1" href="Quitting-GDB.html#Quitting-GDB">2.2 Quitting <small>GDB</small></a></li>
     <li><a name="toc-Shell-Commands-1" href="Shell-Commands.html#Shell-Commands">2.3 Shell Commands</a></li>
@@ -254,19 +254,19 @@ software in general.  We will miss him.
     <li><a name="toc-Command-Syntax-1" href="Command-Syntax.html#Command-Syntax">3.1 Command Syntax</a></li>
     <li><a name="toc-Command-Settings-1" href="Command-Settings.html#Command-Settings">3.2 Command Settings</a></li>
     <li><a name="toc-Command-Completion" href="Completion.html#Completion">3.3 Command Completion</a></li>
-    <li><a name="toc-Command-options" href="Command-Options.html#Command-Options">3.4 Command options</a></li>
-    <li><a name="toc-Automatically-prepend-default-arguments-to-user_002ddefined-aliases" href="Command-aliases-default-args.html#Command-aliases-default-args">3.5 Automatically prepend default arguments to user-defined aliases</a></li>
+    <li><a name="toc-Command-Options-1" href="Command-Options.html#Command-Options">3.4 Command Options</a></li>
+    <li><a name="toc-Automatically-Prepend-Default-Arguments-to-User_002dDefined-Aliases" href="Command-aliases-default-args.html#Command-aliases-default-args">3.5 Automatically Prepend Default Arguments to User-Defined Aliases</a></li>
     <li><a name="toc-Getting-Help" href="Help.html#Help">3.6 Getting Help</a></li>
   </ul></li>
-  <li><a name="toc-Running-Programs-Under-GDB" href="Running.html#Running">4 Running Programs Under <small>GDB</small></a>
+  <li><a name="toc-Running-Programs-under-GDB" href="Running.html#Running">4 Running Programs under <small>GDB</small></a>
   <ul class="no-bullet">
     <li><a name="toc-Compiling-for-Debugging" href="Compilation.html#Compilation">4.1 Compiling for Debugging</a></li>
-    <li><a name="toc-Starting-your-Program" href="Starting.html#Starting">4.2 Starting your Program</a></li>
+    <li><a name="toc-Starting-Your-Program" href="Starting.html#Starting">4.2 Starting Your Program</a></li>
     <li><a name="toc-Your-Program_0027s-Arguments" href="Arguments.html#Arguments">4.3 Your Program&rsquo;s Arguments</a></li>
     <li><a name="toc-Your-Program_0027s-Environment" href="Environment.html#Environment">4.4 Your Program&rsquo;s Environment</a></li>
     <li><a name="toc-Your-Program_0027s-Working-Directory" href="Working-Directory.html#Working-Directory">4.5 Your Program&rsquo;s Working Directory</a></li>
     <li><a name="toc-Your-Program_0027s-Input-and-Output" href="Input_002fOutput.html#Input_002fOutput">4.6 Your Program&rsquo;s Input and Output</a></li>
-    <li><a name="toc-Debugging-an-Already_002drunning-Process" href="Attach.html#Attach">4.7 Debugging an Already-running Process</a></li>
+    <li><a name="toc-Debugging-an-Already_002dRunning-Process" href="Attach.html#Attach">4.7 Debugging an Already-Running Process</a></li>
     <li><a name="toc-Killing-the-Child-Process" href="Kill-Process.html#Kill-Process">4.8 Killing the Child Process</a></li>
     <li><a name="toc-Debugging-Multiple-Inferiors-Connections-and-Programs" href="Inferiors-Connections-and-Programs.html#Inferiors-Connections-and-Programs">4.9 Debugging Multiple Inferiors Connections and Programs</a></li>
     <li><a name="toc-Debugging-Programs-with-Multiple-Threads" href="Threads.html#Threads">4.10 Debugging Programs with Multiple Threads</a></li>
@@ -287,16 +287,16 @@ software in general.  We will miss him.
       <li><a name="toc-Disabling-Breakpoints" href="Disabling.html#Disabling">5.1.5 Disabling Breakpoints</a></li>
       <li><a name="toc-Break-Conditions" href="Conditions.html#Conditions">5.1.6 Break Conditions</a></li>
       <li><a name="toc-Breakpoint-Command-Lists" href="Break-Commands.html#Break-Commands">5.1.7 Breakpoint Command Lists</a></li>
-      <li><a name="toc-Dynamic-Printf-1" href="Dynamic-Printf.html#Dynamic-Printf">5.1.8 Dynamic Printf</a></li>
-      <li><a name="toc-How-to-save-breakpoints-to-a-file" href="Save-Breakpoints.html#Save-Breakpoints">5.1.9 How to save breakpoints to a file</a></li>
+      <li><a name="toc-Dynamic-printf-1" href="Dynamic-printf.html#Dynamic-printf">5.1.8 Dynamic printf</a></li>
+      <li><a name="toc-How-to-Save-Breakpoints-to-a-File" href="Save-Breakpoints.html#Save-Breakpoints">5.1.9 How to Save Breakpoints to a File</a></li>
       <li><a name="toc-Static-Probe-Points-1" href="Static-Probe-Points.html#Static-Probe-Points">5.1.10 Static Probe Points</a></li>
       <li><a name="toc-_0060_0060Cannot-insert-breakpoints_0027_0027" href="Error-in-Breakpoints.html#Error-in-Breakpoints">5.1.11 &ldquo;Cannot insert breakpoints&rdquo;</a></li>
       <li><a name="toc-_0060_0060Breakpoint-address-adjusted_002e_002e_002e_0027_0027" href="Breakpoint_002drelated-Warnings.html#Breakpoint_002drelated-Warnings">5.1.12 &ldquo;Breakpoint address adjusted...&rdquo;</a></li>
     </ul></li>
     <li><a name="toc-Continuing-and-Stepping-1" href="Continuing-and-Stepping.html#Continuing-and-Stepping">5.2 Continuing and Stepping</a></li>
-    <li><a name="toc-Skipping-Over-Functions-and-Files-1" href="Skipping-Over-Functions-and-Files.html#Skipping-Over-Functions-and-Files">5.3 Skipping Over Functions and Files</a></li>
+    <li><a name="toc-Skipping-over-Functions-and-Files" href="Skipping-Over-Functions-and-Files.html#Skipping-Over-Functions-and-Files">5.3 Skipping over Functions and Files</a></li>
     <li><a name="toc-Signals-1" href="Signals.html#Signals">5.4 Signals</a></li>
-    <li><a name="toc-Stopping-and-Starting-Multi_002dthread-Programs" href="Thread-Stops.html#Thread-Stops">5.5 Stopping and Starting Multi-thread Programs</a>
+    <li><a name="toc-Stopping-and-Starting-Multi_002dThread-Programs" href="Thread-Stops.html#Thread-Stops">5.5 Stopping and Starting Multi-Thread Programs</a>
     <ul class="no-bullet">
       <li><a name="toc-All_002dStop-Mode-1" href="All_002dStop-Mode.html#All_002dStop-Mode">5.5.1 All-Stop Mode</a></li>
       <li><a name="toc-Non_002dStop-Mode-1" href="Non_002dStop-Mode.html#Non_002dStop-Mode">5.5.2 Non-Stop Mode</a></li>
@@ -306,16 +306,16 @@ software in general.  We will miss him.
       <li><a name="toc-Observer-Mode-1" href="Observer-Mode.html#Observer-Mode">5.5.6 Observer Mode</a></li>
     </ul></li>
   </ul></li>
-  <li><a name="toc-Running-programs-backward" href="Reverse-Execution.html#Reverse-Execution">6 Running programs backward</a></li>
+  <li><a name="toc-Running-Programs-Backward" href="Reverse-Execution.html#Reverse-Execution">6 Running Programs Backward</a></li>
   <li><a name="toc-Recording-Inferior_0027s-Execution-and-Replaying-It" href="Process-Record-and-Replay.html#Process-Record-and-Replay">7 Recording Inferior&rsquo;s Execution and Replaying It</a></li>
   <li><a name="toc-Examining-the-Stack" href="Stack.html#Stack">8 Examining the Stack</a>
   <ul class="no-bullet">
     <li><a name="toc-Stack-Frames" href="Frames.html#Frames">8.1 Stack Frames</a></li>
     <li><a name="toc-Backtraces" href="Backtrace.html#Backtrace">8.2 Backtraces</a></li>
     <li><a name="toc-Selecting-a-Frame" href="Selection.html#Selection">8.3 Selecting a Frame</a></li>
-    <li><a name="toc-Information-About-a-Frame" href="Frame-Info.html#Frame-Info">8.4 Information About a Frame</a></li>
-    <li><a name="toc-Applying-a-Command-to-Several-Frames_002e" href="Frame-Apply.html#Frame-Apply">8.5 Applying a Command to Several Frames.</a></li>
-    <li><a name="toc-Management-of-Frame-Filters_002e" href="Frame-Filter-Management.html#Frame-Filter-Management">8.6 Management of Frame Filters.</a></li>
+    <li><a name="toc-Information-about-a-Frame" href="Frame-Info.html#Frame-Info">8.4 Information about a Frame</a></li>
+    <li><a name="toc-Applying-a-Command-to-Several-Frames" href="Frame-Apply.html#Frame-Apply">8.5 Applying a Command to Several Frames</a></li>
+    <li><a name="toc-Management-of-Frame-Filters" href="Frame-Filter-Management.html#Frame-Filter-Management">8.6 Management of Frame Filters</a></li>
   </ul></li>
   <li><a name="toc-Examining-Source-Files" href="Source.html#Source">9 Examining Source Files</a>
   <ul class="no-bullet">
@@ -328,7 +328,7 @@ software in general.  We will miss him.
     </ul></li>
     <li><a name="toc-Editing-Source-Files" href="Edit.html#Edit">9.3 Editing Source Files</a>
     <ul class="no-bullet">
-      <li><a name="toc-Choosing-your-Editor" href="Edit.html#Choosing-your-Editor">9.3.1 Choosing your Editor</a></li>
+      <li><a name="toc-Choosing-Your-Editor" href="Edit.html#Choosing-Your-Editor">9.3.1 Choosing Your Editor</a></li>
     </ul></li>
     <li><a name="toc-Searching-Source-Files" href="Search.html#Search">9.4 Searching Source Files</a></li>
     <li><a name="toc-Specifying-Source-Directories" href="Source-Path.html#Source-Path">9.5 Specifying Source Directories</a></li>
@@ -367,7 +367,7 @@ software in general.  We will miss him.
       </ul></li>
       <li><a name="toc-Memory-Access-Checking" href="Memory-Region-Attributes.html#Memory-Access-Checking">10.17.2 Memory Access Checking</a></li>
     </ul></li>
-    <li><a name="toc-Copy-Between-Memory-and-a-File" href="Dump_002fRestore-Files.html#Dump_002fRestore-Files">10.18 Copy Between Memory and a File</a></li>
+    <li><a name="toc-Copy-between-Memory-and-a-File" href="Dump_002fRestore-Files.html#Dump_002fRestore-Files">10.18 Copy between Memory and a File</a></li>
     <li><a name="toc-How-to-Produce-a-Core-File-from-Your-Program" href="Core-File-Generation.html#Core-File-Generation">10.19 How to Produce a Core File from Your Program</a></li>
     <li><a name="toc-Character-Sets-1" href="Character-Sets.html#Character-Sets">10.20 Character Sets</a></li>
     <li><a name="toc-Caching-Data-of-Targets" href="Caching-Target-Data.html#Caching-Target-Data">10.21 Caching Data of Targets</a></li>
@@ -413,7 +413,7 @@ software in general.  We will miss him.
   </ul></li>
   <li><a name="toc-Using-GDB-with-Different-Languages" href="Languages.html#Languages">15 Using <small>GDB</small> with Different Languages</a>
   <ul class="no-bullet">
-    <li><a name="toc-Switching-Between-Source-Languages" href="Setting.html#Setting">15.1 Switching Between Source Languages</a>
+    <li><a name="toc-Switching-between-Source-Languages" href="Setting.html#Setting">15.1 Switching between Source Languages</a>
     <ul class="no-bullet">
       <li><a name="toc-List-of-Filename-Extensions-and-Languages" href="Filenames.html#Filenames">15.1.1 List of Filename Extensions and Languages</a></li>
       <li><a name="toc-Setting-the-Working-Language" href="Manually.html#Manually">15.1.2 Setting the Working Language</a></li>
@@ -436,14 +436,14 @@ software in general.  We will miss him.
         <li><a name="toc-C-and-C_002b_002b-Type-and-Range-Checks" href="C-Checks.html#C-Checks">15.4.1.5 C and C<tt>++</tt> Type and Range Checks</a></li>
         <li><a name="toc-GDB-and-C" href="Debugging-C.html#Debugging-C">15.4.1.6 <small>GDB</small> and C</a></li>
         <li><a name="toc-GDB-Features-for-C_002b_002b" href="Debugging-C-Plus-Plus.html#Debugging-C-Plus-Plus">15.4.1.7 <small>GDB</small> Features for C<tt>++</tt></a></li>
-        <li><a name="toc-Decimal-Floating-Point-format" href="Decimal-Floating-Point.html#Decimal-Floating-Point">15.4.1.8 Decimal Floating Point format</a></li>
+        <li><a name="toc-Decimal-Floating-Point-Format" href="Decimal-Floating-Point.html#Decimal-Floating-Point">15.4.1.8 Decimal Floating Point Format</a></li>
       </ul></li>
       <li><a name="toc-D-1" href="D.html#D">15.4.2 D</a></li>
       <li><a name="toc-Go-1" href="Go.html#Go">15.4.3 Go</a></li>
       <li><a name="toc-Objective_002dC-1" href="Objective_002dC.html#Objective_002dC">15.4.4 Objective-C</a>
       <ul class="no-bullet">
         <li><a name="toc-Method-Names-in-Commands-1" href="Method-Names-in-Commands.html#Method-Names-in-Commands">15.4.4.1 Method Names in Commands</a></li>
-        <li><a name="toc-The-Print-Command-With-Objective_002dC" href="The-Print-Command-with-Objective_002dC.html#The-Print-Command-with-Objective_002dC">15.4.4.2 The Print Command With Objective-C</a></li>
+        <li><a name="toc-The-Print-Command-with-Objective_002dC-1" href="The-Print-Command-with-Objective_002dC.html#The-Print-Command-with-Objective_002dC">15.4.4.2 The Print Command with Objective-C</a></li>
       </ul></li>
       <li><a name="toc-OpenCL-C-1" href="OpenCL-C.html#OpenCL-C">15.4.5 OpenCL C</a>
       <ul class="no-bullet">
@@ -476,12 +476,12 @@ software in general.  We will miss him.
         <li><a name="toc-Introduction" href="Ada-Mode-Intro.html#Ada-Mode-Intro">15.4.10.1 Introduction</a></li>
         <li><a name="toc-Omissions-from-Ada-1" href="Omissions-from-Ada.html#Omissions-from-Ada">15.4.10.2 Omissions from Ada</a></li>
         <li><a name="toc-Additions-to-Ada-1" href="Additions-to-Ada.html#Additions-to-Ada">15.4.10.3 Additions to Ada</a></li>
-        <li><a name="toc-Overloading-support-for-Ada-1" href="Overloading-support-for-Ada.html#Overloading-support-for-Ada">15.4.10.4 Overloading support for Ada</a></li>
+        <li><a name="toc-Overloading-Support-for-Ada" href="Overloading-support-for-Ada.html#Overloading-support-for-Ada">15.4.10.4 Overloading Support for Ada</a></li>
         <li><a name="toc-Stopping-at-the-Very-Beginning" href="Stopping-Before-Main-Program.html#Stopping-Before-Main-Program">15.4.10.5 Stopping at the Very Beginning</a></li>
         <li><a name="toc-Ada-Exceptions-1" href="Ada-Exceptions.html#Ada-Exceptions">15.4.10.6 Ada Exceptions</a></li>
         <li><a name="toc-Extensions-for-Ada-Tasks" href="Ada-Tasks.html#Ada-Tasks">15.4.10.7 Extensions for Ada Tasks</a></li>
-        <li><a name="toc-Tasking-Support-when-Debugging-Core-Files" href="Ada-Tasks-and-Core-Files.html#Ada-Tasks-and-Core-Files">15.4.10.8 Tasking Support when Debugging Core Files</a></li>
-        <li><a name="toc-Tasking-Support-when-using-the-Ravenscar-Profile" href="Ravenscar-Profile.html#Ravenscar-Profile">15.4.10.9 Tasking Support when using the Ravenscar Profile</a></li>
+        <li><a name="toc-Tasking-Support-When-Debugging-Core-Files" href="Ada-Tasks-and-Core-Files.html#Ada-Tasks-and-Core-Files">15.4.10.8 Tasking Support When Debugging Core Files</a></li>
+        <li><a name="toc-Tasking-Support-When-Using-the-Ravenscar-Profile" href="Ravenscar-Profile.html#Ravenscar-Profile">15.4.10.9 Tasking Support When Using the Ravenscar Profile</a></li>
         <li><a name="toc-Ada-Settings-1" href="Ada-Settings.html#Ada-Settings">15.4.10.10 Ada Settings</a></li>
         <li><a name="toc-Known-Peculiarities-of-Ada-Mode" href="Ada-Glitches.html#Ada-Glitches">15.4.10.11 Known Peculiarities of Ada Mode</a></li>
       </ul></li>
@@ -493,18 +493,18 @@ software in general.  We will miss him.
   <ul class="no-bullet">
     <li><a name="toc-Assignment-to-Variables" href="Assignment.html#Assignment">17.1 Assignment to Variables</a></li>
     <li><a name="toc-Continuing-at-a-Different-Address" href="Jumping.html#Jumping">17.2 Continuing at a Different Address</a></li>
-    <li><a name="toc-Giving-your-Program-a-Signal" href="Signaling.html#Signaling">17.3 Giving your Program a Signal</a></li>
+    <li><a name="toc-Giving-Your-Program-a-Signal" href="Signaling.html#Signaling">17.3 Giving Your Program a Signal</a></li>
     <li><a name="toc-Returning-from-a-Function" href="Returning.html#Returning">17.4 Returning from a Function</a></li>
     <li><a name="toc-Calling-Program-Functions" href="Calling.html#Calling">17.5 Calling Program Functions</a>
     <ul class="no-bullet">
-      <li><a name="toc-Calling-functions-with-no-debug-info" href="Calling.html#Calling-functions-with-no-debug-info">17.5.1 Calling functions with no debug info</a></li>
+      <li><a name="toc-Calling-Functions-with-No-Debug-Info" href="Calling.html#Calling-Functions-with-No-Debug-Info">17.5.1 Calling Functions with No Debug Info</a></li>
     </ul></li>
     <li><a name="toc-Patching-Programs" href="Patching.html#Patching">17.6 Patching Programs</a></li>
-    <li><a name="toc-Compiling-and-injecting-code-in-GDB" href="Compiling-and-Injecting-Code.html#Compiling-and-Injecting-Code">17.7 Compiling and injecting code in <small>GDB</small></a>
+    <li><a name="toc-Compiling-and-Injecting-Code-in-GDB" href="Compiling-and-Injecting-Code.html#Compiling-and-Injecting-Code">17.7 Compiling and Injecting Code in <small>GDB</small></a>
     <ul class="no-bullet">
-      <li><a name="toc-Compilation-options-for-the-compile-command" href="Compiling-and-Injecting-Code.html#Compilation-options-for-the-compile-command">17.7.1 Compilation options for the <code>compile</code> command</a></li>
-      <li><a name="toc-Caveats-when-using-the-compile-command" href="Compiling-and-Injecting-Code.html#Caveats-when-using-the-compile-command">17.7.2 Caveats when using the <code>compile</code> command</a></li>
-      <li><a name="toc-Compiler-search-for-the-compile-command" href="Compiling-and-Injecting-Code.html#Compiler-search-for-the-compile-command">17.7.3 Compiler search for the <code>compile</code> command</a></li>
+      <li><a name="toc-Compilation-Options-for-the-compile-Command" href="Compiling-and-Injecting-Code.html#Compilation-Options-for-the-compile-Command">17.7.1 Compilation Options for the <code>compile</code> Command</a></li>
+      <li><a name="toc-Caveats-When-Using-the-compile-Command" href="Compiling-and-Injecting-Code.html#Caveats-When-Using-the-compile-Command">17.7.2 Caveats When Using the <code>compile</code> Command</a></li>
+      <li><a name="toc-Compiler-Search-for-the-compile-Command" href="Compiling-and-Injecting-Code.html#Compiler-Search-for-the-compile-Command">17.7.3 Compiler Search for the <code>compile</code> Command</a></li>
     </ul></li>
   </ul></li>
   <li><a name="toc-GDB-Files-1" href="GDB-Files.html#GDB-Files">18 <small>GDB</small> Files</a>
@@ -512,10 +512,10 @@ software in general.  We will miss him.
     <li><a name="toc-Commands-to-Specify-Files" href="Files.html#Files">18.1 Commands to Specify Files</a></li>
     <li><a name="toc-File-Caching-1" href="File-Caching.html#File-Caching">18.2 File Caching</a></li>
     <li><a name="toc-Debugging-Information-in-Separate-Files" href="Separate-Debug-Files.html#Separate-Debug-Files">18.3 Debugging Information in Separate Files</a></li>
-    <li><a name="toc-Debugging-information-in-a-special-section" href="MiniDebugInfo.html#MiniDebugInfo">18.4 Debugging information in a special section</a></li>
+    <li><a name="toc-Debugging-Information-in-a-Special-Section" href="MiniDebugInfo.html#MiniDebugInfo">18.4 Debugging Information in a Special Section</a></li>
     <li><a name="toc-Index-Files-Speed-Up-GDB" href="Index-Files.html#Index-Files">18.5 Index Files Speed Up <small>GDB</small></a>
     <ul class="no-bullet">
-      <li><a name="toc-Automatic-symbol-index-cache" href="Index-Files.html#Automatic-symbol-index-cache">18.5.1 Automatic symbol index cache</a></li>
+      <li><a name="toc-Automatic-Symbol-Index-Cache" href="Index-Files.html#Automatic-Symbol-Index-Cache">18.5.1 Automatic Symbol Index Cache</a></li>
     </ul></li>
     <li><a name="toc-Errors-Reading-Symbol-Files" href="Symbol-Errors.html#Symbol-Errors">18.6 Errors Reading Symbol Files</a></li>
     <li><a name="toc-GDB-Data-Files" href="Data-Files.html#Data-Files">18.7 GDB Data Files</a></li>
@@ -534,25 +534,25 @@ software in general.  We will miss him.
       <li><a name="toc-Host-and-Target-Files" href="Connecting.html#Host-and-Target-Files">20.1.2 Host and Target Files</a></li>
       <li><a name="toc-Remote-Connection-Commands" href="Connecting.html#Remote-Connection-Commands">20.1.3 Remote Connection Commands</a></li>
     </ul></li>
-    <li><a name="toc-Sending-files-to-a-remote-system" href="File-Transfer.html#File-Transfer">20.2 Sending files to a remote system</a></li>
+    <li><a name="toc-Sending-Files-to-a-Remote-System" href="File-Transfer.html#File-Transfer">20.2 Sending Files to a Remote System</a></li>
     <li><a name="toc-Using-the-gdbserver-Program" href="Server.html#Server">20.3 Using the <code>gdbserver</code> Program</a>
     <ul class="no-bullet">
       <li><a name="toc-Running-gdbserver-1" href="Server.html#Running-gdbserver-1">20.3.1 Running <code>gdbserver</code></a>
       <ul class="no-bullet">
         <li><a name="toc-Attaching-to-a-Running-Program" href="Server.html#Attaching-to-a-Running-Program">20.3.1.1 Attaching to a Running Program</a></li>
-        <li><a name="toc-TCP-port-allocation-lifecycle-of-gdbserver" href="Server.html#TCP-port-allocation-lifecycle-of-gdbserver">20.3.1.2 TCP port allocation lifecycle of <code>gdbserver</code></a></li>
+        <li><a name="toc-TCP-Port-Allocation-Lifecycle-of-gdbserver" href="Server.html#TCP-Port-Allocation-Lifecycle-of-gdbserver">20.3.1.2 TCP Port Allocation Lifecycle of <code>gdbserver</code></a></li>
         <li><a name="toc-Other-Command_002dLine-Arguments-for-gdbserver-1" href="Server.html#Other-Command_002dLine-Arguments-for-gdbserver-1">20.3.1.3 Other Command-Line Arguments for <code>gdbserver</code></a></li>
       </ul></li>
       <li><a name="toc-Connecting-to-gdbserver" href="Server.html#Connecting-to-gdbserver">20.3.2 Connecting to <code>gdbserver</code></a></li>
       <li><a name="toc-Monitor-Commands-for-gdbserver-1" href="Server.html#Monitor-Commands-for-gdbserver-1">20.3.3 Monitor Commands for <code>gdbserver</code></a></li>
-      <li><a name="toc-Tracepoints-support-in-gdbserver" href="Server.html#Tracepoints-support-in-gdbserver">20.3.4 Tracepoints support in <code>gdbserver</code></a></li>
+      <li><a name="toc-Tracepoints-Support-in-gdbserver" href="Server.html#Tracepoints-Support-in-gdbserver">20.3.4 Tracepoints Support in <code>gdbserver</code></a></li>
     </ul></li>
     <li><a name="toc-Remote-Configuration-1" href="Remote-Configuration.html#Remote-Configuration">20.4 Remote Configuration</a></li>
     <li><a name="toc-Implementing-a-Remote-Stub" href="Remote-Stub.html#Remote-Stub">20.5 Implementing a Remote Stub</a>
     <ul class="no-bullet">
       <li><a name="toc-What-the-Stub-Can-Do-for-You" href="Stub-Contents.html#Stub-Contents">20.5.1 What the Stub Can Do for You</a></li>
       <li><a name="toc-What-You-Must-Do-for-the-Stub" href="Bootstrapping.html#Bootstrapping">20.5.2 What You Must Do for the Stub</a></li>
-      <li><a name="toc-Putting-it-All-Together" href="Debug-Session.html#Debug-Session">20.5.3 Putting it All Together</a></li>
+      <li><a name="toc-Putting-It-All-Together" href="Debug-Session.html#Debug-Session">20.5.3 Putting It All Together</a></li>
     </ul></li>
   </ul></li>
   <li><a name="toc-Configuration_002dSpecific-Information" href="Configurations.html#Configurations">21 Configuration-Specific Information</a>
@@ -591,10 +591,10 @@ software in general.  We will miss him.
     <ul class="no-bullet">
       <li><a name="toc-AArch64-1" href="AArch64.html#AArch64">21.4.1 AArch64</a>
       <ul class="no-bullet">
-        <li><a name="toc-AArch64-SVE_002e" href="AArch64.html#AArch64-SVE_002e">21.4.1.1 AArch64 SVE.</a></li>
-        <li><a name="toc-AArch64-Pointer-Authentication_002e" href="AArch64.html#AArch64-Pointer-Authentication_002e">21.4.1.2 AArch64 Pointer Authentication.</a></li>
+        <li><a name="toc-AArch64-SVE" href="AArch64.html#AArch64-SVE">21.4.1.1 AArch64 SVE</a></li>
+        <li><a name="toc-AArch64-Pointer-Authentication" href="AArch64.html#AArch64-Pointer-Authentication">21.4.1.2 AArch64 Pointer Authentication</a></li>
       </ul></li>
-      <li><a name="toc-x86-Architecture_002dspecific-Issues" href="i386.html#i386">21.4.2 x86 Architecture-specific Issues</a>
+      <li><a name="toc-x86-Architecture_002dSpecific-Issues" href="i386.html#i386">21.4.2 x86 Architecture-Specific Issues</a>
       <ul class="no-bullet">
         <li><a name="toc-Intel-Memory-Protection-Extensions-_0028MPX_0029_002e" href="i386.html#Intel-Memory-Protection-Extensions-_0028MPX_0029_002e">21.4.2.1 Intel <em>Memory Protection Extensions</em> (MPX).</a></li>
       </ul></li>
@@ -619,12 +619,12 @@ software in general.  We will miss him.
     <li><a name="toc-Output-Styling-1" href="Output-Styling.html#Output-Styling">22.5 Output Styling</a></li>
     <li><a name="toc-Numbers-1" href="Numbers.html#Numbers">22.6 Numbers</a></li>
     <li><a name="toc-Configuring-the-Current-ABI" href="ABI.html#ABI">22.7 Configuring the Current ABI</a></li>
-    <li><a name="toc-Automatically-loading-associated-files" href="Auto_002dloading.html#Auto_002dloading">22.8 Automatically loading associated files</a>
+    <li><a name="toc-Automatically-Loading-Associated-Files" href="Auto_002dloading.html#Auto_002dloading">22.8 Automatically Loading Associated Files</a>
     <ul class="no-bullet">
-      <li><a name="toc-Automatically-loading-init-file-in-the-current-directory" href="Init-File-in-the-Current-Directory.html#Init-File-in-the-Current-Directory">22.8.1 Automatically loading init file in the current directory</a></li>
-      <li><a name="toc-Automatically-loading-thread-debugging-library" href="libthread_005fdb_002eso_002e1-file.html#libthread_005fdb_002eso_002e1-file">22.8.2 Automatically loading thread debugging library</a></li>
-      <li><a name="toc-Security-restriction-for-auto_002dloading" href="Auto_002dloading-safe-path.html#Auto_002dloading-safe-path">22.8.3 Security restriction for auto-loading</a></li>
-      <li><a name="toc-Displaying-files-tried-for-auto_002dload" href="Auto_002dloading-verbose-mode.html#Auto_002dloading-verbose-mode">22.8.4 Displaying files tried for auto-load</a></li>
+      <li><a name="toc-Automatically-Loading-Init-File-in-the-Current-Directory" href="Init-File-in-the-Current-Directory.html#Init-File-in-the-Current-Directory">22.8.1 Automatically Loading Init File in the Current Directory</a></li>
+      <li><a name="toc-Automatically-Loading-Thread-Debugging-Library" href="libthread_005fdb_002eso_002e1-file.html#libthread_005fdb_002eso_002e1-file">22.8.2 Automatically Loading Thread Debugging Library</a></li>
+      <li><a name="toc-Security-Restriction-for-Auto_002dLoading" href="Auto_002dloading-safe-path.html#Auto_002dloading-safe-path">22.8.3 Security Restriction for Auto-Loading</a></li>
+      <li><a name="toc-Displaying-Files-Tried-for-Auto_002dLoad" href="Auto_002dloading-verbose-mode.html#Auto_002dloading-verbose-mode">22.8.4 Displaying Files Tried for Auto-Load</a></li>
     </ul></li>
     <li><a name="toc-Optional-Warnings-and-Messages" href="Messages_002fWarnings.html#Messages_002fWarnings">22.9 Optional Warnings and Messages</a></li>
     <li><a name="toc-Optional-Messages-about-Internal-Happenings" href="Debugging-Output.html#Debugging-Output">22.10 Optional Messages about Internal Happenings</a></li>
@@ -634,11 +634,11 @@ software in general.  We will miss him.
   <ul class="no-bullet">
     <li><a name="toc-Canned-Sequences-of-Commands" href="Sequences.html#Sequences">23.1 Canned Sequences of Commands</a>
     <ul class="no-bullet">
-      <li><a name="toc-User_002ddefined-Commands" href="Define.html#Define">23.1.1 User-defined Commands</a></li>
-      <li><a name="toc-User_002ddefined-Command-Hooks" href="Hooks.html#Hooks">23.1.2 User-defined Command Hooks</a></li>
+      <li><a name="toc-User_002dDefined-Commands" href="Define.html#Define">23.1.1 User-Defined Commands</a></li>
+      <li><a name="toc-User_002dDefined-Command-Hooks" href="Hooks.html#Hooks">23.1.2 User-Defined Command Hooks</a></li>
       <li><a name="toc-Command-Files-1" href="Command-Files.html#Command-Files">23.1.3 Command Files</a></li>
       <li><a name="toc-Commands-for-Controlled-Output" href="Output.html#Output">23.1.4 Commands for Controlled Output</a></li>
-      <li><a name="toc-Controlling-auto_002dloading-native-GDB-scripts" href="Auto_002dloading-sequences.html#Auto_002dloading-sequences">23.1.5 Controlling auto-loading native <small>GDB</small> scripts</a></li>
+      <li><a name="toc-Controlling-Auto_002dLoading-Native-GDB-Scripts" href="Auto_002dloading-sequences.html#Auto_002dloading-sequences">23.1.5 Controlling Auto-Loading Native <small>GDB</small> Scripts</a></li>
     </ul></li>
     <li><a name="toc-Extending-GDB-using-Python" href="Python.html#Python">23.2 Extending <small>GDB</small> using Python</a>
     <ul class="no-bullet">
@@ -728,21 +728,21 @@ software in general.  We will miss him.
         <li><a name="toc-Guile-Types-Module-1" href="Guile-Types-Module.html#Guile-Types-Module">23.3.5.2 Guile Types Module</a></li>
       </ul></li>
     </ul></li>
-    <li><a name="toc-Auto_002dloading-extensions-1" href="Auto_002dloading-extensions.html#Auto_002dloading-extensions">23.4 Auto-loading extensions</a>
+    <li><a name="toc-Auto_002dLoading-Extensions" href="Auto_002dloading-extensions.html#Auto_002dloading-extensions">23.4 Auto-Loading Extensions</a>
     <ul class="no-bullet">
-      <li><a name="toc-The-objfile_002dgdb_002eext-file" href="objfile_002dgdbdotext-file.html#objfile_002dgdbdotext-file">23.4.1 The <samp><var>objfile</var>-gdb.<var>ext</var></samp> file</a></li>
-      <li><a name="toc-The-_002edebug_005fgdb_005fscripts-section" href="dotdebug_005fgdb_005fscripts-section.html#dotdebug_005fgdb_005fscripts-section">23.4.2 The <code>.debug_gdb_scripts</code> section</a>
+      <li><a name="toc-The-objfile_002dgdb_002eext-File" href="objfile_002dgdbdotext-file.html#objfile_002dgdbdotext-file">23.4.1 The <samp><var>objfile</var>-gdb.<var>ext</var></samp> File</a></li>
+      <li><a name="toc-The-_002edebug_005fgdb_005fscripts-Section" href="dotdebug_005fgdb_005fscripts-section.html#dotdebug_005fgdb_005fscripts-section">23.4.2 The <code>.debug_gdb_scripts</code> Section</a>
       <ul class="no-bullet">
         <li><a name="toc-Script-File-Entries" href="dotdebug_005fgdb_005fscripts-section.html#Script-File-Entries">23.4.2.1 Script File Entries</a></li>
         <li><a name="toc-Script-Text-Entries" href="dotdebug_005fgdb_005fscripts-section.html#Script-Text-Entries">23.4.2.2 Script Text Entries</a></li>
       </ul></li>
-      <li><a name="toc-Which-flavor-to-choose_003f-1" href="Which-flavor-to-choose_003f.html#Which-flavor-to-choose_003f">23.4.3 Which flavor to choose?</a></li>
+      <li><a name="toc-Which-Flavor-to-Choose_003f" href="Which-flavor-to-choose_003f.html#Which-flavor-to-choose_003f">23.4.3 Which Flavor to Choose?</a></li>
     </ul></li>
     <li><a name="toc-Multiple-Extension-Languages-1" href="Multiple-Extension-Languages.html#Multiple-Extension-Languages">23.5 Multiple Extension Languages</a>
     <ul class="no-bullet">
-      <li><a name="toc-Python-comes-first" href="Multiple-Extension-Languages.html#Python-comes-first">23.5.1 Python comes first</a></li>
+      <li><a name="toc-Python-Comes-First" href="Multiple-Extension-Languages.html#Python-Comes-First">23.5.1 Python Comes First</a></li>
     </ul></li>
-    <li><a name="toc-Creating-new-spellings-of-existing-commands" href="Aliases.html#Aliases">23.6 Creating new spellings of existing commands</a></li>
+    <li><a name="toc-Creating-New-Spellings-of-Existing-Commands" href="Aliases.html#Aliases">23.6 Creating New Spellings of Existing Commands</a></li>
   </ul></li>
   <li><a name="toc-Command-Interpreters" href="Interpreters.html#Interpreters">24 Command Interpreters</a></li>
   <li><a name="toc-GDB-Text-User-Interface" href="TUI.html#TUI">25 <small>GDB</small> Text User Interface</a>
@@ -750,7 +750,7 @@ software in general.  We will miss him.
     <li><a name="toc-TUI-Overview-1" href="TUI-Overview.html#TUI-Overview">25.1 TUI Overview</a></li>
     <li><a name="toc-TUI-Key-Bindings" href="TUI-Keys.html#TUI-Keys">25.2 TUI Key Bindings</a></li>
     <li><a name="toc-TUI-Single-Key-Mode-1" href="TUI-Single-Key-Mode.html#TUI-Single-Key-Mode">25.3 TUI Single Key Mode</a></li>
-    <li><a name="toc-TUI_002dspecific-Commands" href="TUI-Commands.html#TUI-Commands">25.4 TUI-specific Commands</a></li>
+    <li><a name="toc-TUI_002dSpecific-Commands" href="TUI-Commands.html#TUI-Commands">25.4 TUI-Specific Commands</a></li>
     <li><a name="toc-TUI-Configuration-Variables" href="TUI-Configuration.html#TUI-Configuration">25.5 TUI Configuration Variables</a></li>
   </ul></li>
   <li><a name="toc-Using-GDB-under-GNU-Emacs" href="Emacs.html#Emacs">26 Using <small>GDB</small> under <small>GNU</small> Emacs</a></li>
@@ -760,13 +760,13 @@ software in general.  We will miss him.
     <li><a name="toc-Notation-and-Terminology" href="GDB_002fMI.html#Notation-and-Terminology">Notation and Terminology</a></li>
     <li><a name="toc-GDB_002fMI-General-Design-1" href="GDB_002fMI-General-Design.html#GDB_002fMI-General-Design">27.1 <small>GDB/MI</small> General Design</a>
     <ul class="no-bullet">
-      <li><a name="toc-Context-management-1" href="Context-management.html#Context-management">27.1.1 Context management</a>
+      <li><a name="toc-Context-Management" href="Context-management.html#Context-management">27.1.1 Context Management</a>
       <ul class="no-bullet">
         <li><a name="toc-Threads-and-Frames" href="Context-management.html#Threads-and-Frames">27.1.1.1 Threads and Frames</a></li>
         <li><a name="toc-Language" href="Context-management.html#Language">27.1.1.2 Language</a></li>
       </ul></li>
-      <li><a name="toc-Asynchronous-command-execution-and-non_002dstop-mode" href="Asynchronous-and-non_002dstop-modes.html#Asynchronous-and-non_002dstop-modes">27.1.2 Asynchronous command execution and non-stop mode</a></li>
-      <li><a name="toc-Thread-groups-1" href="Thread-groups.html#Thread-groups">27.1.3 Thread groups</a></li>
+      <li><a name="toc-Asynchronous-Command-Execution-and-Non_002dStop-Mode" href="Asynchronous-and-non_002dstop-modes.html#Asynchronous-and-non_002dstop-modes">27.1.2 Asynchronous Command Execution and Non-Stop Mode</a></li>
+      <li><a name="toc-Thread-Groups" href="Thread-groups.html#Thread-groups">27.1.3 Thread Groups</a></li>
     </ul></li>
     <li><a name="toc-GDB_002fMI-Command-Syntax-1" href="GDB_002fMI-Command-Syntax.html#GDB_002fMI-Command-Syntax">27.2 <small>GDB/MI</small> Command Syntax</a>
     <ul class="no-bullet">
@@ -794,7 +794,7 @@ software in general.  We will miss him.
       <li><a name="toc-Ada-Exception-GDB_002fMI-Catchpoints" href="Ada-Exception-GDB_002fMI-Catchpoint-Commands.html#Ada-Exception-GDB_002fMI-Catchpoint-Commands">27.9.2 Ada Exception <small>GDB/MI</small> Catchpoints</a></li>
       <li><a name="toc-C_002b_002b-Exception-GDB_002fMI-Catchpoints" href="C_002b_002b-Exception-GDB_002fMI-Catchpoint-Commands.html#C_002b_002b-Exception-GDB_002fMI-Catchpoint-Commands">27.9.3 C<tt>++</tt> Exception <small>GDB/MI</small> Catchpoints</a></li>
     </ul></li>
-    <li><a name="toc-GDB_002fMI-Program-Context-1" href="GDB_002fMI-Program-Context.html#GDB_002fMI-Program-Context">27.10 <small>GDB/MI</small>  Program Context</a></li>
+    <li><a name="toc-GDB_002fMI-Program-Context-1" href="GDB_002fMI-Program-Context.html#GDB_002fMI-Program-Context">27.10 <small>GDB/MI</small> Program Context</a></li>
     <li><a name="toc-GDB_002fMI-Thread-Commands-1" href="GDB_002fMI-Thread-Commands.html#GDB_002fMI-Thread-Commands">27.11 <small>GDB/MI</small> Thread Commands</a></li>
     <li><a name="toc-GDB_002fMI-Ada-Tasking-Commands-1" href="GDB_002fMI-Ada-Tasking-Commands.html#GDB_002fMI-Ada-Tasking-Commands">27.12 <small>GDB/MI</small> Ada Tasking Commands</a></li>
     <li><a name="toc-GDB_002fMI-Program-Execution-1" href="GDB_002fMI-Program-Execution.html#GDB_002fMI-Program-Execution">27.13 <small>GDB/MI</small> Program Execution</a></li>
@@ -812,7 +812,7 @@ software in general.  We will miss him.
   </ul></li>
   <li><a name="toc-GDB-Annotations" href="Annotations.html#Annotations">28 <small>GDB</small> Annotations</a>
   <ul class="no-bullet">
-    <li><a name="toc-What-is-an-Annotation_003f" href="Annotations-Overview.html#Annotations-Overview">28.1 What is an Annotation?</a></li>
+    <li><a name="toc-What-Is-an-Annotation_003f" href="Annotations-Overview.html#Annotations-Overview">28.1 What Is an Annotation?</a></li>
     <li><a name="toc-The-Server-Prefix" href="Server-Prefix.html#Server-Prefix">28.2 The Server Prefix</a></li>
     <li><a name="toc-Annotation-for-GDB-Input" href="Prompting.html#Prompting">28.3 Annotation for <small>GDB</small> Input</a></li>
     <li><a name="toc-Errors-1" href="Errors.html#Errors">28.4 Errors</a></li>
@@ -831,9 +831,9 @@ software in general.  We will miss him.
       <li><a name="toc-Writing-JIT-Debug-Info-Readers-1" href="Writing-JIT-Debug-Info-Readers.html#Writing-JIT-Debug-Info-Readers">29.4.2 Writing JIT Debug Info Readers</a></li>
     </ul></li>
   </ul></li>
-  <li><a name="toc-In_002dProcess-Agent-1" href="In_002dProcess-Agent.html#In_002dProcess-Agent">30 In-Process Agent</a>
+  <li><a name="toc-In_002dprocess-Agent-1" href="In_002dprocess-Agent.html#In_002dprocess-Agent">30 In-process Agent</a>
   <ul class="no-bullet">
-    <li><a name="toc-In_002dProcess-Agent-Protocol-1" href="In_002dProcess-Agent-Protocol.html#In_002dProcess-Agent-Protocol">30.1 In-Process Agent Protocol</a>
+    <li><a name="toc-In_002dprocess-Agent-Protocol-1" href="In_002dprocess-Agent-Protocol.html#In_002dprocess-Agent-Protocol">30.1 In-process Agent Protocol</a>
     <ul class="no-bullet">
       <li><a name="toc-IPA-Protocol-Objects-1" href="IPA-Protocol-Objects.html#IPA-Protocol-Objects">30.1.1 IPA Protocol Objects</a></li>
       <li><a name="toc-IPA-Protocol-Commands-1" href="IPA-Protocol-Commands.html#IPA-Protocol-Commands">30.1.2 IPA Protocol Commands</a></li>
@@ -892,9 +892,9 @@ software in general.  We will miss him.
     <li><a name="toc-Compiling-GDB-in-Another-Directory" href="Separate-Objdir.html#Separate-Objdir">C.3 Compiling <small>GDB</small> in Another Directory</a></li>
     <li><a name="toc-Specifying-Names-for-Hosts-and-Targets" href="Config-Names.html#Config-Names">C.4 Specifying Names for Hosts and Targets</a></li>
     <li><a name="toc-configure-Options" href="Configure-Options.html#Configure-Options">C.5 <samp>configure</samp> Options</a></li>
-    <li><a name="toc-System_002dwide-configuration-and-settings" href="System_002dwide-configuration.html#System_002dwide-configuration">C.6 System-wide configuration and settings</a>
+    <li><a name="toc-System_002dWide-Configuration-and-Settings" href="System_002dwide-configuration.html#System_002dwide-configuration">C.6 System-Wide Configuration and Settings</a>
     <ul class="no-bullet">
-      <li><a name="toc-Installed-System_002dwide-Configuration-Scripts" href="System_002dwide-Configuration-Scripts.html#System_002dwide-Configuration-Scripts">C.6.1 Installed System-wide Configuration Scripts</a></li>
+      <li><a name="toc-Installed-System_002dWide-Configuration-Scripts" href="System_002dwide-Configuration-Scripts.html#System_002dwide-Configuration-Scripts">C.6.1 Installed System-Wide Configuration Scripts</a></li>
     </ul></li>
   </ul></li>
   <li><a name="toc-Maintenance-Commands-1" href="Maintenance-Commands.html#Maintenance-Commands">Appendix D Maintenance Commands</a></li>
@@ -906,11 +906,11 @@ software in general.  We will miss him.
     <li><a name="toc-General-Query-Packets-1" href="General-Query-Packets.html#General-Query-Packets">E.4 General Query Packets</a></li>
     <li><a name="toc-Architecture_002dSpecific-Protocol-Details-1" href="Architecture_002dSpecific-Protocol-Details.html#Architecture_002dSpecific-Protocol-Details">E.5 Architecture-Specific Protocol Details</a>
     <ul class="no-bullet">
-      <li><a name="toc-ARM_002dspecific-Protocol-Details" href="ARM_002dSpecific-Protocol-Details.html#ARM_002dSpecific-Protocol-Details">E.5.1 <acronym>ARM</acronym>-specific Protocol Details</a>
+      <li><a name="toc-ARM_002dSpecific-Protocol-Details-1" href="ARM_002dSpecific-Protocol-Details.html#ARM_002dSpecific-Protocol-Details">E.5.1 <acronym>ARM</acronym>-Specific Protocol Details</a>
       <ul class="no-bullet">
         <li><a name="toc-ARM-Breakpoint-Kinds-1" href="ARM-Breakpoint-Kinds.html#ARM-Breakpoint-Kinds">E.5.1.1 <acronym>ARM</acronym> Breakpoint Kinds</a></li>
       </ul></li>
-      <li><a name="toc-MIPS_002dspecific-Protocol-Details" href="MIPS_002dSpecific-Protocol-Details.html#MIPS_002dSpecific-Protocol-Details">E.5.2 <acronym>MIPS</acronym>-specific Protocol Details</a>
+      <li><a name="toc-MIPS_002dSpecific-Protocol-Details-1" href="MIPS_002dSpecific-Protocol-Details.html#MIPS_002dSpecific-Protocol-Details">E.5.2 <acronym>MIPS</acronym>-Specific Protocol Details</a>
       <ul class="no-bullet">
         <li><a name="toc-MIPS-Register-Packet-Format" href="MIPS-Register-packet-Format.html#MIPS-Register-packet-Format">E.5.2.1 <acronym>MIPS</acronym> Register Packet Format</a></li>
         <li><a name="toc-MIPS-Breakpoint-Kinds-1" href="MIPS-Breakpoint-Kinds.html#MIPS-Breakpoint-Kinds">E.5.2.2 <acronym>MIPS</acronym> Breakpoint Kinds</a></li>
@@ -918,7 +918,7 @@ software in general.  We will miss him.
     </ul></li>
     <li><a name="toc-Tracepoint-Packets-1" href="Tracepoint-Packets.html#Tracepoint-Packets">E.6 Tracepoint Packets</a>
     <ul class="no-bullet">
-      <li><a name="toc-Relocate-instruction-reply-packet" href="Tracepoint-Packets.html#Relocate-instruction-reply-packet">E.6.1 Relocate instruction reply packet</a></li>
+      <li><a name="toc-Relocate-Instruction-Reply-Packet" href="Tracepoint-Packets.html#Relocate-Instruction-Reply-Packet">E.6.1 Relocate Instruction Reply Packet</a></li>
     </ul></li>
     <li><a name="toc-Host-I_002fO-Packets-1" href="Host-I_002fO-Packets.html#Host-I_002fO-Packets">E.7 Host I/O Packets</a></li>
     <li><a name="toc-Interrupts-1" href="Interrupts.html#Interrupts">E.8 Interrupts</a></li>
@@ -948,7 +948,7 @@ software in general.  We will miss him.
         <li><a name="toc-isatty-1" href="isatty.html#isatty">isatty</a></li>
         <li><a name="toc-system-1" href="system.html#system">system</a></li>
       </ul></li>
-      <li><a name="toc-Protocol_002dspecific-Representation-of-Datatypes-1" href="Protocol_002dspecific-Representation-of-Datatypes.html#Protocol_002dspecific-Representation-of-Datatypes">E.13.8 Protocol-specific Representation of Datatypes</a>
+      <li><a name="toc-Protocol_002dSpecific-Representation-of-Datatypes" href="Protocol_002dspecific-Representation-of-Datatypes.html#Protocol_002dspecific-Representation-of-Datatypes">E.13.8 Protocol-Specific Representation of Datatypes</a>
       <ul class="no-bullet">
         <li><a name="toc-Integral-Datatypes-1" href="Integral-Datatypes.html#Integral-Datatypes">Integral Datatypes</a></li>
         <li><a name="toc-Pointer-Values-1" href="Pointer-Values.html#Pointer-Values">Pointer Values</a></li>
@@ -960,7 +960,7 @@ software in general.  We will miss him.
       <ul class="no-bullet">
         <li><a name="toc-Open-Flags-1" href="Open-Flags.html#Open-Flags">Open Flags</a></li>
         <li><a name="toc-mode_005ft-Values-1" href="mode_005ft-Values.html#mode_005ft-Values">mode_t Values</a></li>
-        <li><a name="toc-Errno-Values-1" href="Errno-Values.html#Errno-Values">Errno Values</a></li>
+        <li><a name="toc-errno-Values-1" href="errno-Values.html#errno-Values">errno Values</a></li>
         <li><a name="toc-Lseek-Flags-1" href="Lseek-Flags.html#Lseek-Flags">Lseek Flags</a></li>
         <li><a name="toc-Limits-1" href="Limits.html#Limits">Limits</a></li>
       </ul></li>
@@ -1008,7 +1008,7 @@ software in general.  We will miss him.
       <li><a name="toc-M68K-Features-1" href="M68K-Features.html#M68K-Features">G.5.7 M68K Features</a></li>
       <li><a name="toc-NDS32-Features-1" href="NDS32-Features.html#NDS32-Features">G.5.8 NDS32 Features</a></li>
       <li><a name="toc-Nios-II-Features-1" href="Nios-II-Features.html#Nios-II-Features">G.5.9 Nios II Features</a></li>
-      <li><a name="toc-Openrisc-1000-Features" href="OpenRISC-1000-Features.html#OpenRISC-1000-Features">G.5.10 Openrisc 1000 Features</a></li>
+      <li><a name="toc-OpenRISC-1000-Features-1" href="OpenRISC-1000-Features.html#OpenRISC-1000-Features">G.5.10 OpenRISC 1000 Features</a></li>
       <li><a name="toc-PowerPC-Features-1" href="PowerPC-Features.html#PowerPC-Features">G.5.11 PowerPC Features</a></li>
       <li><a name="toc-RISC_002dV-Features-1" href="RISC_002dV-Features.html#RISC_002dV-Features">G.5.12 RISC-V Features</a></li>
       <li><a name="toc-RX-Features-1" href="RX-Features.html#RX-Features">G.5.13 RX Features</a></li>

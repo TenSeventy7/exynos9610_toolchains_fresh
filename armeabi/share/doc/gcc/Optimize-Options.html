@@ -4721,6 +4721,30 @@ The precision of division is propotional to this param when division
 approximation is enabled.  The default value is 2.
 </p>
 </dd>
+<dt><code>aarch64-autovec-preference</code></dt>
+<dd><p>Force an ISA selection strategy for auto-vectorization.  Accepts values from
+0 to 4, inclusive.
+</p><dl compact="compact">
+<dt>&lsquo;<samp>0</samp>&rsquo;</dt>
+<dd><p>Use the default heuristics.
+</p></dd>
+<dt>&lsquo;<samp>1</samp>&rsquo;</dt>
+<dd><p>Use only Advanced SIMD for auto-vectorization.
+</p></dd>
+<dt>&lsquo;<samp>2</samp>&rsquo;</dt>
+<dd><p>Use only SVE for auto-vectorization.
+</p></dd>
+<dt>&lsquo;<samp>3</samp>&rsquo;</dt>
+<dd><p>Use both Advanced SIMD and SVE.  Prefer Advanced SIMD when the costs are
+deemed equal.
+</p></dd>
+<dt>&lsquo;<samp>4</samp>&rsquo;</dt>
+<dd><p>Use both Advanced SIMD and SVE.  Prefer SVE when the costs are deemed equal.
+</p></dd>
+</dl>
+<p>The default value is 0.
+</p>
+</dd>
 </dl>
 
 </dd>

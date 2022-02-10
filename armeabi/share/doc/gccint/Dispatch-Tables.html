@@ -194,6 +194,11 @@ returns <code>UI_TARGET</code>.
 <dd><p>True if the <code>TARGET_ASM_UNWIND_EMIT</code> hook should be called before the assembly for <var>insn</var> has been emitted, false if the hook should be called afterward.
 </p></dd></dl>
 
+<dl>
+<dt><a name="index-TARGET_005fASM_005fSHOULD_005fRESTORE_005fCFA_005fSTATE"></a>Target Hook: <em>bool</em> <strong>TARGET_ASM_SHOULD_RESTORE_CFA_STATE</strong> <em>(void)</em></dt>
+<dd><p>For DWARF-based unwind frames, two CFI instructions provide for save and restore of register state.  GCC maintains the current frame address (CFA) separately from the register bank but the unwinder in libgcc preserves this state along with the registers (and this is expected by the code that writes the unwind frames).  This hook allows the target to specify that the CFA data is not saved/restored along with the registers by the target unwinder so that suitable additional instructions should be emitted to restore it.
+</p></dd></dl>
+
 <hr>
 <div class="header">
 <p>

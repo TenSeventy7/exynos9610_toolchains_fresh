@@ -2,7 +2,7 @@
 <html>
 <!-- This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2020 Free Software Foundation, Inc.
+Copyright (C) 1991-2021 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -152,6 +152,7 @@ processor names are recognized:
 <code>bdver4</code>,
 <code>znver1</code>,
 <code>znver2</code>,
+<code>znver3</code>,
 <code>btver1</code>,
 <code>btver2</code>,
 <code>generic32</code> and
@@ -216,6 +217,11 @@ accept various extension mnemonics.  For example,
 <code>enqcmd</code>,
 <code>serialize</code>,
 <code>tsxldtrk</code>,
+<code>kl</code>,
+<code>nokl</code>,
+<code>widekl</code>,
+<code>nowidekl</code>,
+<code>hreset</code>,
 <code>avx512f</code>,
 <code>avx512cd</code>,
 <code>avx512er</code>,
@@ -232,7 +238,9 @@ accept various extension mnemonics.  For example,
 <code>avx512_vnni</code>,
 <code>avx512_bitalg</code>,
 <code>avx512_vp2intersect</code>,
+<code>tdx</code>,
 <code>avx512_bf16</code>,
+<code>avx_vnni</code>,
 <code>noavx512f</code>,
 <code>noavx512cd</code>,
 <code>noavx512er</code>,
@@ -249,10 +257,20 @@ accept various extension mnemonics.  For example,
 <code>noavx512_vnni</code>,
 <code>noavx512_bitalg</code>,
 <code>noavx512_vp2intersect</code>,
+<code>notdx</code>,
 <code>noavx512_bf16</code>,
+<code>noavx_vnni</code>,
 <code>noenqcmd</code>,
 <code>noserialize</code>,
 <code>notsxldtrk</code>,
+<code>amx_int8</code>,
+<code>noamx_int8</code>,
+<code>amx_bf16</code>,
+<code>noamx_bf16</code>,
+<code>amx_tile</code>,
+<code>noamx_tile</code>,
+<code>nouintr</code>,
+<code>nohreset</code>,
 <code>vmx</code>,
 <code>vmfunc</code>,
 <code>smx</code>,
@@ -280,6 +298,7 @@ accept various extension mnemonics.  For example,
 <code>wbnoinvd</code>,
 <code>pconfig</code>,
 <code>waitpkg</code>,
+<code>uintr</code>,
 <code>cldemote</code>,
 <code>rdpru</code>,
 <code>mcommit</code>,
@@ -294,6 +313,9 @@ accept various extension mnemonics.  For example,
 <code>3dnowa</code>,
 <code>sse4a</code>,
 <code>sse5</code>,
+<code>snp</code>,
+<code>invlpgb</code>,
+<code>tlbsync</code>,
 <code>svme</code> and
 <code>padlock</code>.
 Note that rather than extending a basic instruction set, the extension
@@ -540,7 +562,7 @@ before indirect near branch instructions.
 before indirect near branch via register and issue a warning before
 indirect near branch via memory.
 It also implicitly sets <samp>-mlfence-before-ret=<var>shl</var></samp> when
-there&rsquo;s no explict <samp>-mlfence-before-ret=</samp>.
+there&rsquo;s no explicit <samp>-mlfence-before-ret=</samp>.
 <samp>-mlfence-before-indirect-branch=<var>register</var></samp> will generate
 lfence before indirect near branch via register.
 <samp>-mlfence-before-indirect-branch=<var>memory</var></samp> will issue a

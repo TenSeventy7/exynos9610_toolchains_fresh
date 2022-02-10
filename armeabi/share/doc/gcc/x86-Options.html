@@ -202,15 +202,15 @@ BMI, BMI2 and F16C instruction set support.
 </dd>
 <dt>&lsquo;<samp>broadwell</samp>&rsquo;</dt>
 <dd><p>Intel Broadwell CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3,
-SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA,
-BMI, BMI2, F16C, RDSEED, ADCX and PREFETCHW instruction set support.
+SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA, BMI, BMI2,
+F16C, RDSEED ADCX and PREFETCHW instruction set support.
 </p>
 </dd>
 <dt>&lsquo;<samp>skylake</samp>&rsquo;</dt>
 <dd><p>Intel Skylake CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3,
 SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA,
-BMI, BMI2, F16C, RDSEED, ADCX, PREFETCHW, CLFLUSHOPT, XSAVEC and
-XSAVES instruction set support.
+BMI, BMI2, F16C, RDSEED, ADCX, PREFETCHW, CLFLUSHOPT, XSAVEC and XSAVES
+instruction set support.
 </p>
 </dd>
 <dt>&lsquo;<samp>bonnell</samp>&rsquo;</dt>
@@ -220,39 +220,41 @@ instruction set support.
 </dd>
 <dt>&lsquo;<samp>silvermont</samp>&rsquo;</dt>
 <dd><p>Intel Silvermont CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3,
-SSE4.1, SSE4.2, POPCNT, AES, PCLMUL and RDRND instruction set support.
+SSE4.1, SSE4.2, POPCNT, AES, PREFETCHW, PCLMUL and RDRND instruction set support.
 </p>
 </dd>
 <dt>&lsquo;<samp>goldmont</samp>&rsquo;</dt>
 <dd><p>Intel Goldmont CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3,
-SSE4.1, SSE4.2, POPCNT, AES, PCLMUL, RDRND, XSAVE, XSAVEOPT and FSGSBASE
-instruction set support.
+SSE4.1, SSE4.2, POPCNT, AES, PREFETCHW, PCLMUL, RDRND, XSAVE, XSAVEC, XSAVES,
+XSAVEOPT and FSGSBASE instruction set support.
 </p>
 </dd>
 <dt>&lsquo;<samp>goldmont-plus</samp>&rsquo;</dt>
 <dd><p>Intel Goldmont Plus CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3,
-SSSE3, SSE4.1, SSE4.2, POPCNT, AES, PCLMUL, RDRND, XSAVE, XSAVEOPT, FSGSBASE,
-PTWRITE, RDPID, SGX and UMIP instruction set support.
+SSSE3, SSE4.1, SSE4.2, POPCNT, AES, PREFETCHW, PCLMUL, RDRND, XSAVE, XSAVEC,
+XSAVES, XSAVEOPT, FSGSBASE, PTWRITE, RDPID, SGX and UMIP instruction set support.
 </p>
 </dd>
 <dt>&lsquo;<samp>tremont</samp>&rsquo;</dt>
 <dd><p>Intel Tremont CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3,
-SSE4.1, SSE4.2, POPCNT, AES, PCLMUL, RDRND, XSAVE, XSAVEOPT, FSGSBASE, PTWRITE,
-RDPID, SGX, UMIP, GFNI-SSE, CLWB and ENCLV instruction set support.
+SSE4.1, SSE4.2, POPCNT, AES, PREFETCHW, PCLMUL, RDRND, XSAVE, XSAVEC, XSAVES,
+XSAVEOPT, FSGSBASE, PTWRITE, RDPID, SGX, UMIP, GFNI-SSE, CLWB, MOVDIRI,
+MOVDIR64B, CLDEMOTE and WAITPKG instruction set support.
 </p>
 </dd>
 <dt>&lsquo;<samp>knl</samp>&rsquo;</dt>
 <dd><p>Intel Knight&rsquo;s Landing CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3,
 SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA,
-BMI, BMI2, F16C, RDSEED, ADCX, PREFETCHW, AVX512F, AVX512PF, AVX512ER and
-AVX512CD instruction set support.
+BMI, BMI2, F16C, RDSEED, ADCX, PREFETCHW, PREFETCHWT1, AVX512F, AVX512PF,
+AVX512ER and AVX512CD instruction set support.
 </p>
 </dd>
 <dt>&lsquo;<samp>knm</samp>&rsquo;</dt>
 <dd><p>Intel Knights Mill CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3,
 SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA,
-BMI, BMI2, F16C, RDSEED, ADCX, PREFETCHW, AVX512F, AVX512PF, AVX512ER, AVX512CD,
-AVX5124VNNIW, AVX5124FMAPS and AVX512VPOPCNTDQ instruction set support.
+BMI, BMI2, F16C, RDSEED, ADCX, PREFETCHW, PREFETCHWT1, AVX512F, AVX512PF,
+AVX512ER, AVX512CD, AVX5124VNNIW, AVX5124FMAPS and AVX512VPOPCNTDQ instruction
+set support.
 </p>
 </dd>
 <dt>&lsquo;<samp>skylake-avx512</samp>&rsquo;</dt>
@@ -310,8 +312,8 @@ SSE4.1, SSE4.2, POPCNT, PKU, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA, BMI,
 BMI2, F16C, RDSEED, ADCX, PREFETCHW, CLFLUSHOPT, XSAVEC, XSAVES, AVX512F,
 AVX512VL, AVX512BW, AVX512DQ, AVX512CD, AVX512VBMI, AVX512IFMA, SHA, CLWB, UMIP,
 RDPID, GFNI, AVX512VBMI2, AVX512VPOPCNTDQ, AVX512BITALG, AVX512VNNI, VPCLMULQDQ,
-VAES, PCONFIG, WBNOINVD, MOVDIRI, MOVDIR64B and  AVX512VP2INTERSECT instruction
-set support.
+VAES, PCONFIG, WBNOINVD, MOVDIRI, MOVDIR64B, AVX512VP2INTERSECT and KEYLOCKER
+instruction set support.
 </p>
 </dd>
 <dt>&lsquo;<samp>k6</samp>&rsquo;</dt>
@@ -400,6 +402,14 @@ supersets BMI, BMI2, CLWB, F16C, FMA, FSGSBASE, AVX, AVX2, ADCX, RDSEED,
 MWAITX, SHA, CLZERO, AES, PCLMUL, CX16, MOVBE, MMX, SSE, SSE2, SSE3, SSE4A,
 SSSE3, SSE4.1, SSE4.2, ABM, XSAVEC, XSAVES, CLFLUSHOPT, POPCNT, RDPID,
 WBNOINVD, and 64-bit instruction set extensions.)
+</p>
+</dd>
+<dt>&lsquo;<samp>znver3</samp>&rsquo;</dt>
+<dd><p>AMD Family 19h core based CPUs with x86-64 instruction set support. (This
+supersets BMI, BMI2, CLWB, F16C, FMA, FSGSBASE, AVX, AVX2, ADCX, RDSEED,
+MWAITX, SHA, CLZERO, AES, PCLMUL, CX16, MOVBE, MMX, SSE, SSE2, SSE3, SSE4A,
+SSSE3, SSE4.1, SSE4.2, ABM, XSAVEC, XSAVES, CLFLUSHOPT, POPCNT, RDPID,
+WBNOINVD, PKU, VPCLMULQDQ, VAES, and 64-bit instruction set extensions.)
 </p>
 </dd>
 <dt>&lsquo;<samp>btver1</samp>&rsquo;</dt>

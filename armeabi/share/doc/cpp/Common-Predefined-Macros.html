@@ -489,11 +489,13 @@ handling.
 </p>
 </dd>
 <dt><code>__GXX_EXPERIMENTAL_CXX0X__</code></dt>
-<dd><p>This macro is defined when compiling a C++ source file with the option
-<samp>-std=c++0x</samp> or <samp>-std=gnu++0x</samp>. It indicates that some
-features likely to be included in C++0x are available. Note that these
-features are experimental, and may change or be removed in future
-versions of GCC.
+<dd><p>This macro is defined when compiling a C++ source file with C++11 features
+enabled, i.e., for all C++ language dialects except <samp>-std=c++98</samp>
+and <samp>-std=gnu++98</samp>. This macro is obsolete, but can be used to
+detect experimental C++0x features in very old versions of GCC. Since
+GCC 4.7.0 the <code>__cplusplus</code> macro is defined correctly, so most
+code should test <code>__cplusplus &gt;= 201103L</code> instead of using this
+macro.
 </p>
 </dd>
 <dt><code>__GXX_WEAK__</code></dt>

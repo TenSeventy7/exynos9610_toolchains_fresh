@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <!-- This file documents the GNU linker LD
-(GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16))
-version 2.35.1.
+(GNU Toolchain for the A-profile Architecture 10.3-2021.07 (arm-10.29))
+version 2.36.1.
 
-Copyright (C) 1991-2020 Free Software Foundation, Inc.
+Copyright (C) 1991-2021 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -774,7 +774,7 @@ just copy in the newest one.
 <a name="index-push-state-governing-input-file-handling"></a>
 </dd>
 <dt><code>--push-state</code></dt>
-<dd><p>The <samp>--push-state</samp> allows to preserve the current state of the
+<dd><p>The <samp>--push-state</samp> allows one to preserve the current state of the
 flags which govern the input file handling so that they can all be
 restored with one corresponding <samp>--pop-state</samp> option.
 </p>
@@ -1180,6 +1180,66 @@ so that symbols in this shared library interpose all other shared
 libraries not so marked.
 </p>
 </dd>
+<dt>&lsquo;<samp>unique</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>nounique</samp>&rsquo;</dt>
+<dd><p>When generating a shared library or other dynamically loadable ELF
+object mark it as one that should (by default) only ever be loaded once,
+and only in the main namespace (when using <code>dlmopen</code>). This is
+primarily used to mark fundamental libraries such as libc, libpthread et
+al which do not usually function correctly unless they are the sole instances
+of themselves. This behaviour can be overridden by the <code>dlmopen</code> caller
+and does not apply to certain loading mechanisms (such as audit libraries).
+</p>
+</dd>
+<dt>&lsquo;<samp>lam-u48</samp>&rsquo;</dt>
+<dd><p>Generate GNU_PROPERTY_X86_FEATURE_1_LAM_U48 in .note.gnu.property section
+to indicate compatibility with Intel LAM_U48.  Supported for Linux/x86_64.
+</p>
+</dd>
+<dt>&lsquo;<samp>lam-u57</samp>&rsquo;</dt>
+<dd><p>Generate GNU_PROPERTY_X86_FEATURE_1_LAM_U57 in .note.gnu.property section
+to indicate compatibility with Intel LAM_U57.  Supported for Linux/x86_64.
+</p>
+</dd>
+<dt>&lsquo;<samp>lam-u48-report=none</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>lam-u48-report=warning</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>lam-u48-report=error</samp>&rsquo;</dt>
+<dd><p>Specify how to report the missing GNU_PROPERTY_X86_FEATURE_1_LAM_U48
+property in input .note.gnu.property section.
+<samp>lam-u48-report=none</samp>, which is the default, will make the
+linker not report missing properties in input files.
+<samp>lam-u48-report=warning</samp> will make the linker issue a warning for
+missing properties in input files.  <samp>lam-u48-report=error</samp> will
+make the linker issue an error for missing properties in input files.
+Supported for Linux/x86_64.
+</p>
+</dd>
+<dt>&lsquo;<samp>lam-u57-report=none</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>lam-u57-report=warning</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>lam-u57-report=error</samp>&rsquo;</dt>
+<dd><p>Specify how to report the missing GNU_PROPERTY_X86_FEATURE_1_LAM_U57
+property in input .note.gnu.property section.
+<samp>lam-u57-report=none</samp>, which is the default, will make the
+linker not report missing properties in input files.
+<samp>lam-u57-report=warning</samp> will make the linker issue a warning for
+missing properties in input files.  <samp>lam-u57-report=error</samp> will
+make the linker issue an error for missing properties in input files.
+Supported for Linux/x86_64.
+</p>
+</dd>
+<dt>&lsquo;<samp>lam-report=none</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>lam-report=warning</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>lam-report=error</samp>&rsquo;</dt>
+<dd><p>Specify how to report the missing GNU_PROPERTY_X86_FEATURE_1_LAM_U48 and
+GNU_PROPERTY_X86_FEATURE_1_LAM_U57 properties in input .note.gnu.property
+section.  <samp>lam-report=none</samp>, which is the default, will make the
+linker not report missing properties in input files.
+<samp>lam-report=warning</samp> will make the linker issue a warning for
+missing properties in input files.  <samp>lam-report=error</samp> will make
+the linker issue an error for missing properties in input files.
+Supported for Linux/x86_64.
+</p>
+</dd>
 <dt>&lsquo;<samp>lazy</samp>&rsquo;</dt>
 <dd><p>When generating an executable or shared library, mark it to tell the
 dynamic linker to defer function call resolution to the point when
@@ -1269,6 +1329,13 @@ be in wholly disjoint pages from any other data.  Don&rsquo;t create separate
 code <code>PT_LOAD</code> segment if &lsquo;<samp>noseparate-code</samp>&rsquo; is used.
 </p>
 </dd>
+<dt>&lsquo;<samp>unique-symbol</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>nounique-symbol</samp>&rsquo;</dt>
+<dd><p>Avoid duplicated local symbol names in the symbol string table.  Append
+&quot;.<code>number</code>&quot; to duplicated local symbol names if &lsquo;<samp>unique-symbol</samp>&rsquo;
+is used.  <samp>nounique-symbol</samp> is the default.
+</p>
+</dd>
 <dt>&lsquo;<samp>shstk</samp>&rsquo;</dt>
 <dd><p>Generate GNU_PROPERTY_X86_FEATURE_1_SHSTK in .note.gnu.property section
 to indicate compatibility with Intel Shadow Stack.  Supported for
@@ -1306,6 +1373,18 @@ report an error if &lsquo;<samp>notext</samp>&rsquo; or &lsquo;<samp>textoff</sa
 <dd><p>Do not report unresolved symbol references from regular object files,
 either when creating an executable, or when creating a shared library.
 This option is the inverse of &lsquo;<samp>-z defs</samp>&rsquo;.
+</p>
+</dd>
+<dt>&lsquo;<samp>x86-64-baseline</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>x86-64-v2</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>x86-64-v3</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>x86-64-v4</samp>&rsquo;</dt>
+<dd><p>Specify the x86-64 ISA level needed in .note.gnu.property section.
+<samp>x86-64-baseline</samp> generates <code>GNU_PROPERTY_X86_ISA_1_BASELINE</code>.
+<samp>x86-64-v2</samp> generates <code>GNU_PROPERTY_X86_ISA_1_V2</code>.
+<samp>x86-64-v3</samp> generates <code>GNU_PROPERTY_X86_ISA_1_V3</code>.
+<samp>x86-64-v4</samp> generates <code>GNU_PROPERTY_X86_ISA_1_V4</code>.
+Supported for Linux/i386 and Linux/x86_64.
 </p>
 </dd>
 </dl>
@@ -1524,6 +1603,44 @@ definition.  If the symbol is defined as a common value then any files
 where this happens appear next.  Finally any files that reference the
 symbol are listed.
 </p>
+<a name="index-ctf-variables"></a>
+<a name="index-_002d_002dctf_002dvariables"></a>
+<a name="index-_002d_002dno_002dctf_002dvariables"></a>
+</dd>
+<dt><code>--ctf-variables</code></dt>
+<dt><code>--no-ctf-variables</code></dt>
+<dd><p>The CTF debuginfo format supports a section which encodes the names and
+types of variables found in the program which do not appear in any symbol
+table. These variables clearly cannot be looked up by address by
+conventional debuggers, so the space used for their types and names is
+usually wasted: the types are usually small but the names are often not.
+<samp>--ctf-variables</samp> causes the generation of such a section.
+The default behaviour can be restored with <samp>--no-ctf-variables</samp>.
+</p>
+<a name="index-ctf-type-sharing"></a>
+<a name="index-_002d_002dctf_002dshare_002dtypes"></a>
+</dd>
+<dt><code>--ctf-share-types=<var>method</var></code></dt>
+<dd><p>Adjust the method used to share types between translation units in CTF.
+</p>
+<dl compact="compact">
+<dt>&lsquo;<samp>share-unconflicted</samp>&rsquo;</dt>
+<dd><p>Put all types that do not have ambiguous definitions into the shared dictionary,
+where debuggers can easily access them, even if they only occur in one
+translation unit.  This is the default.
+</p>
+</dd>
+<dt>&lsquo;<samp>share-duplicated</samp>&rsquo;</dt>
+<dd><p>Put only types that occur in multiple translation units into the shared
+dictionary: types with only one definition go into per-translation-unit
+dictionaries.  Types with ambiguous definitions in multiple translation units
+always go into per-translation-unit dictionaries.  This tends to make the CTF
+larger, but may reduce the amount of CTF in the shared dictionary.  For very
+large projects this may speed up opening the CTF and save memory in the CTF
+consumer at runtime.
+</p></dd>
+</dl>
+
 <a name="index-common-allocation-1"></a>
 <a name="index-_002d_002dno_002ddefine_002dcommon"></a>
 </dd>
@@ -1570,6 +1687,15 @@ constants or symbols.  If you need more elaborate expressions, consider
 using the linker command language from a script (see <a href="Assignments.html#Assignments">Assignments</a>).
 <em>Note:</em> there should be no white space between <var>symbol</var>, the
 equals sign (&ldquo;<tt class="key">=</tt>&rdquo;), and <var>expression</var>.
+</p>
+<p>The linker processes &lsquo;<samp>--defsym</samp>&rsquo; arguments and &lsquo;<samp>-T</samp>&rsquo; arguments
+in order, placing &lsquo;<samp>--defsym</samp>&rsquo; before &lsquo;<samp>-T</samp>&rsquo; will define the
+symbol before the linker script from &lsquo;<samp>-T</samp>&rsquo; is processed, while
+placing &lsquo;<samp>--defsym</samp>&rsquo; after &lsquo;<samp>-T</samp>&rsquo; will define the symbol after
+the linker script has been processed.  This difference has
+consequences for expressions within the linker script that use the
+&lsquo;<samp>--defsym</samp>&rsquo; symbols, which order is correct will depend on what
+you are trying to achieve.
 </p>
 <a name="index-demangling_002c-from-command-line"></a>
 <a name="index-_002d_002ddemangle_005b_003dstyle_005d"></a>
@@ -1670,6 +1796,9 @@ specified either by one of the options &lsquo;<samp>--entry</samp>&rsquo;,
 &lsquo;<samp>--undefined</samp>&rsquo;, or &lsquo;<samp>--gc-keep-exported</samp>&rsquo; or by a <code>ENTRY</code>
 command in the linker script.
 </p>
+<p>As a GNU extension, ELF input sections marked with the
+<code>SHF_GNU_RETAIN</code> flag will not be garbage collected.
+</p>
 <a name="index-_002d_002dprint_002dgc_002dsections"></a>
 <a name="index-_002d_002dno_002dprint_002dgc_002dsections"></a>
 <a name="index-garbage-collection-1"></a>
@@ -1736,10 +1865,34 @@ parsable by tools.  Here is an example of an output:
 </dd>
 <dt><code>-Map=<var>mapfile</var></code></dt>
 <dd><p>Print a link map to the file <var>mapfile</var>.  See the description of the
-<samp>-M</samp> option, above.  Specifying a directory as <var>mapfile</var>
-causes the linker map to be written into a file inside the directory.
-The name of the file is based upon the <var>output</var> filename with
-<code>.map</code> appended.
+<samp>-M</samp> option, above.  If <var>mapfile</var> is just the character
+<code>-</code> then the map will be written to stdout.
+</p>
+<p>Specifying a directory as <var>mapfile</var> causes the linker map to be
+written as a file inside the directory.  Normally name of the file
+inside the directory is computed as the basename of the <var>output</var>
+file with <code>.map</code> appended.   If however the special character
+<code>%</code> is used then this will be replaced by the full path of the
+output file.  Additionally if there are any characters after the
+<var>%</var> symbol then <code>.map</code> will no longer be appended.
+</p>
+<div class="smallexample">
+<pre class="smallexample"> -o foo.exe -Map=bar                  [Creates ./bar]
+ -o ../dir/foo.exe -Map=bar           [Creates ./bar]
+ -o foo.exe -Map=../dir               [Creates ../dir/foo.exe.map]
+ -o ../dir2/foo.exe -Map=../dir       [Creates ../dir/foo.exe.map]
+ -o foo.exe -Map=%                    [Creates ./foo.exe.map]
+ -o ../dir/foo.exe -Map=%             [Creates ../dir/foo.exe.map]
+ -o foo.exe -Map=%.bar                [Creates ./foo.exe.bar]
+ -o ../dir/foo.exe -Map=%.bar         [Creates ../dir/foo.exe.bar]
+ -o ../dir2/foo.exe -Map=../dir/%     [Creates ../dir/../dir2/foo.exe.map]
+ -o ../dir2/foo.exe -Map=../dir/%.bar [Creates ../dir/../dir2/foo.exe.bar]
+</pre></div>
+
+<p>It is an error to specify more than one <code>%</code> character.
+</p>
+<p>If the map file already exists then it will be overwritten by this
+operation.
 </p>
 <a name="index-memory-usage-1"></a>
 <a name="index-_002d_002dno_002dkeep_002dmemory"></a>
@@ -1806,6 +1959,22 @@ architecture.  This is used, for example, to dynamically select an
 appropriate memset function.
 </p></li></ul>
 
+<a name="index-_002d_002derror_002dhandling_002dscript_003dscriptname"></a>
+</dd>
+<dt><code>--error-handling-script=<var>scriptname</var></code></dt>
+<dd><p>If this option is provided then the linker will invoke
+<var>scriptname</var> whenever an error is encountered.  Currently however
+only two kinds of error are supported: missing symbols and missing
+libraries.  Two arguments will be passed to script: the keyword
+&ldquo;undefined-symbol&rdquo; or &lsquo;missing-lib&rdquo; and the <var>name</var> of the 
+undefined symbol or missing library.  The intention is that the script
+will provide suggestions to the user as to where the symbol or library
+might be found.  After the script has finished then the normal linker
+error message will be displayed.
+</p>
+<p>The availability of this option is controlled by a configure time
+switch, so it may not be present in specific implementations.
+</p>
 <a name="index-_002d_002dno_002dundefined_002dversion"></a>
 </dd>
 <dt><code>--no-undefined-version</code></dt>
@@ -1928,7 +2097,7 @@ See <a href="M68HC11_002f68HC12.html#M68HC11_002f68HC12"><code>ld</code> and the
 See <a href="Nios-II.html#Nios-II"><code>ld</code> and the Altera Nios II</a>.
 See <a href="PowerPC-ELF32.html#PowerPC-ELF32"><code>ld</code> and PowerPC 32-bit ELF Support</a>.
 </p>
-<p>On some platforms the &lsquo;<samp>--relax</samp>&rsquo; option performs target-specific,
+<p>On some platforms the <samp>--relax</samp> option performs target specific,
 global optimizations that become possible when the linker resolves
 addressing in the program, such as relaxing address modes,
 synthesizing new instructions, selecting shorter version of current
@@ -1939,12 +2108,12 @@ debugging of the resulting executable impossible.
 This is known to be the case for the Matsushita MN10200 and MN10300
 family of processors.
 </p>
-<p>On platforms where this is not supported, &lsquo;<samp>--relax</samp>&rsquo; is accepted,
-but ignored.
+<p>On platforms where the feature is supported, the option
+<samp>--no-relax</samp> will disable it.
 </p>
-<p>On platforms where &lsquo;<samp>--relax</samp>&rsquo; is accepted the option
-&lsquo;<samp>--no-relax</samp>&rsquo; can be used to disable the feature.
-</p>
+<p>On platforms where the feature is not supported, both <samp>--relax</samp>
+and <samp>--no-relax</samp> are accepted, but ignored.
+</p> 
 <a name="index-retaining-specified-symbols"></a>
 <a name="index-stripping-all-but-some-symbols"></a>
 <a name="index-symbols_002c-retaining-selectively"></a>
@@ -3086,55 +3255,71 @@ of the PE file header:
 <a name="index-_002d_002dhigh_002dentropy_002dva"></a>
 </dd>
 <dt><code>--high-entropy-va</code></dt>
+<dt><code>--disable-high-entropy-va</code></dt>
 <dd><p>Image is compatible with 64-bit address space layout randomization
-(ASLR).
-This option also implies <samp>--dynamicbase</samp> and
+(ASLR).  This option is enabled by default for 64-bit PE images.
+</p>
+<p>This option also implies <samp>--dynamicbase</samp> and
 <samp>--enable-reloc-section</samp>.
 </p>
 <a name="index-_002d_002ddynamicbase"></a>
 </dd>
 <dt><code>--dynamicbase</code></dt>
+<dt><code>--disable-dynamicbase</code></dt>
 <dd><p>The image base address may be relocated using address space layout
 randomization (ASLR).  This feature was introduced with MS Windows
-Vista for i386 PE targets.
+Vista for i386 PE targets.  This option is enabled by default but
+can be disabled via the <samp>--disable-dynamicbase</samp> option.
 This option also implies <samp>--enable-reloc-section</samp>.
 </p>
 <a name="index-_002d_002dforceinteg"></a>
 </dd>
 <dt><code>--forceinteg</code></dt>
-<dd><p>Code integrity checks are enforced.
+<dt><code>--disable-forceinteg</code></dt>
+<dd><p>Code integrity checks are enforced.  This option is disabled by
+default.
 </p>
 <a name="index-_002d_002dnxcompat"></a>
 </dd>
 <dt><code>--nxcompat</code></dt>
+<dt><code>--disable-nxcompat</code></dt>
 <dd><p>The image is compatible with the Data Execution Prevention.
-This feature was introduced with MS Windows XP SP2 for i386 PE targets.
+This feature was introduced with MS Windows XP SP2 for i386 PE
+targets.  The option is enabled by default.
 </p>
 <a name="index-_002d_002dno_002disolation"></a>
 </dd>
 <dt><code>--no-isolation</code></dt>
+<dt><code>--disable-no-isolation</code></dt>
 <dd><p>Although the image understands isolation, do not isolate the image.
+This option is disabled by default.
 </p>
 <a name="index-_002d_002dno_002dseh"></a>
 </dd>
 <dt><code>--no-seh</code></dt>
+<dt><code>--disable-no-seh</code></dt>
 <dd><p>The image does not use SEH. No SE handler may be called from
-this image.
+this image.  This option is disabled by default.
 </p>
 <a name="index-_002d_002dno_002dbind"></a>
 </dd>
 <dt><code>--no-bind</code></dt>
-<dd><p>Do not bind this image.
+<dt><code>--disable-no-bind</code></dt>
+<dd><p>Do not bind this image.  This option is disabled by default.
 </p>
 <a name="index-_002d_002dwdmdriver"></a>
 </dd>
 <dt><code>--wdmdriver</code></dt>
-<dd><p>The driver uses the MS Windows Driver Model.
+<dt><code>--disable-wdmdriver</code></dt>
+<dd><p>The driver uses the MS Windows Driver Model.  This option is disabled
+by default.
 </p>
 <a name="index-_002d_002dtsaware"></a>
 </dd>
 <dt><code>--tsaware</code></dt>
-<dd><p>The image is Terminal Server aware.
+<dt><code>--disable-tsaware</code></dt>
+<dd><p>The image is Terminal Server aware.  This option is disabled by
+default.
 </p>
 <a name="index-_002d_002dinsert_002dtimestamp"></a>
 </dd>
@@ -3152,8 +3337,10 @@ identically.
 <a name="index-_002d_002denable_002dreloc_002dsection"></a>
 </dd>
 <dt><code>--enable-reloc-section</code></dt>
+<dt><code>--disable-reloc-section</code></dt>
 <dd><p>Create the base relocation table, which is necessary if the image
 is loaded at a different image base than specified in the PE header.
+This option is enabled by default.
 </p></dd>
 </dl>
 

@@ -2,7 +2,7 @@
 <html>
 <!-- This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2020 Free Software Foundation, Inc.
+Copyright (C) 1991-2021 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -90,7 +90,6 @@ see <a href="Invoking.html#Invoking">Command-Line Options</a>.
  [<b>&ndash;listing-cont-lines</b>=<var>NUM</var>] [<b>&ndash;keep-locals</b>]
  [<b>&ndash;no-pad-sections</b>]
  [<b>-o</b> <var>objfile</var>] [<b>-R</b>]
- [<b>&ndash;hash-size</b>=<var>NUM</var>] [<b>&ndash;reduce-memory-overheads</b>]
  [<b>&ndash;statistics</b>]
  [<b>-v</b>] [<b>-version</b>] [<b>&ndash;version</b>]
  [<b>-W</b>] [<b>&ndash;warn</b>] [<b>&ndash;fatal-warnings</b>] [<b>-w</b>] [<b>-x</b>]
@@ -313,6 +312,7 @@ see <a href="Invoking.html#Invoking">Command-Line Options</a>.
    [<b>-fpic</b>|<b>-fPIC</b>|<b>-fno-pic</b>]
    [<b>-march</b>=<var>ISA</var>]
    [<b>-mabi</b>=<var>ABI</var>]
+   [<b>-mlittle-endian</b>|<b>-mbig-endian</b>]
 
 <em>Target RL78 options:</em>
    [<b>-mg10</b>]
@@ -544,7 +544,7 @@ option is only supported by some targets, not all of them.
 <dd><p>This option is the same as the <samp>--gdwarf-2</samp> option, except that it
 allows for the possibility of the generation of extra debug information as per
 version 3 of the DWARF specification.  Note - enabling this option does not
-guarantee the generation of any extra infortmation, the choice to do so is on a
+guarantee the generation of any extra information, the choice to do so is on a
 per target basis.
 </p>
 </dd>
@@ -552,7 +552,7 @@ per target basis.
 <dd><p>This option is the same as the <samp>--gdwarf-2</samp> option, except that it
 allows for the possibility of the generation of extra debug information as per
 version 4 of the DWARF specification.  Note - enabling this option does not
-guarantee the generation of any extra infortmation, the choice to do so is on a
+guarantee the generation of any extra information, the choice to do so is on a
 per target basis.
 </p>
 </dd>
@@ -560,7 +560,7 @@ per target basis.
 <dd><p>This option is the same as the <samp>--gdwarf-2</samp> option, except that it
 allows for the possibility of the generation of extra debug information as per
 version 5 of the DWARF specification.  Note - enabling this option does not
-guarantee the generation of any extra infortmation, the choice to do so is on a
+guarantee the generation of any extra information, the choice to do so is on a
 per target basis.
 </p>
 </dd>
@@ -663,20 +663,6 @@ which might be needed on targets which have tight memory constraints.
 <dd><p>Fold the data section into the text section.
 </p>
 </dd>
-<dt><code>--hash-size=<var>number</var></code></dt>
-<dd><p>Set the default size of GAS&rsquo;s hash tables to a prime number close to
-<var>number</var>.  Increasing this value can reduce the length of time it takes the
-assembler to perform its tasks, at the expense of increasing the assembler&rsquo;s
-memory requirements.  Similarly reducing this value can reduce the memory
-requirements at the expense of speed.
-</p>
-</dd>
-<dt><code>--reduce-memory-overheads</code></dt>
-<dd><p>This option reduces GAS&rsquo;s memory requirements, at the expense of making the
-assembly processes slower.  Currently this switch is a synonym for
-&lsquo;<samp>--hash-size=4051</samp>&rsquo;, but in the future it may have other effects as well.
-</p>
-</dd>
 <dt><code>--sectname-subst</code></dt>
 <dd><p>Honor substitution sequences in section names.
 See <a href="Section.html#Section-Name-Substitutions"><code>.section <var>name</var></code></a>.
@@ -754,7 +740,7 @@ processor.
 <dd><p>Select either big-endian (-EB) or little-endian (-EL) output.
 </p></dd>
 <dt><code>-mcode-density</code></dt>
-<dd><p>Enable Code Density extenssion instructions.
+<dd><p>Enable Code Density extension instructions.
 </p></dd>
 </dl>
 

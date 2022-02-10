@@ -2,7 +2,7 @@
 <html>
 <!-- This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2020 Free Software Foundation, Inc.
+Copyright (C) 1991-2021 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -183,144 +183,146 @@ ul.no-bullet {list-style: none}
     <li><a name="toc-_002ealtmacro" href="Altmacro.html#Altmacro">7.4 <code>.altmacro</code></a></li>
     <li><a name="toc-_002eascii-_0022string_0022_2026" href="Ascii.html#Ascii">7.5 <code>.ascii &quot;<var>string</var>&quot;</code>&hellip;</a></li>
     <li><a name="toc-_002easciz-_0022string_0022_2026" href="Asciz.html#Asciz">7.6 <code>.asciz &quot;<var>string</var>&quot;</code>&hellip;</a></li>
-    <li><a name="toc-_002ebalign_005bwl_005d-_005babs_002dexpr_005b_002c-abs_002dexpr_005b_002c-abs_002dexpr_005d_005d_005d" href="Balign.html#Balign">7.7 <code>.balign[wl] [<var>abs-expr</var>[, <var>abs-expr</var>[, <var>abs-expr</var>]]]</code></a></li>
-    <li><a name="toc-Bundle-directives-1" href="Bundle-directives.html#Bundle-directives">7.8 Bundle directives</a>
+    <li><a name="toc-_002eattach_005fto_005fgroup-name" href="Attach_005fto_005fgroup.html#Attach_005fto_005fgroup">7.7 <code>.attach_to_group <var>name</var></code></a></li>
+    <li><a name="toc-_002ebalign_005bwl_005d-_005babs_002dexpr_005b_002c-abs_002dexpr_005b_002c-abs_002dexpr_005d_005d_005d" href="Balign.html#Balign">7.8 <code>.balign[wl] [<var>abs-expr</var>[, <var>abs-expr</var>[, <var>abs-expr</var>]]]</code></a></li>
+    <li><a name="toc-Bundle-directives-1" href="Bundle-directives.html#Bundle-directives">7.9 Bundle directives</a>
     <ul class="no-bullet">
-      <li><a name="toc-_002ebundle_005falign_005fmode-abs_002dexpr" href="Bundle-directives.html#g_t_002ebundle_005falign_005fmode-abs_002dexpr">7.8.1 <code>.bundle_align_mode <var>abs-expr</var></code></a></li>
-      <li><a name="toc-_002ebundle_005flock-and-_002ebundle_005funlock" href="Bundle-directives.html#g_t_002ebundle_005flock-and-_002ebundle_005funlock">7.8.2 <code>.bundle_lock</code> and <code>.bundle_unlock</code></a></li>
+      <li><a name="toc-_002ebundle_005falign_005fmode-abs_002dexpr" href="Bundle-directives.html#g_t_002ebundle_005falign_005fmode-abs_002dexpr">7.9.1 <code>.bundle_align_mode <var>abs-expr</var></code></a></li>
+      <li><a name="toc-_002ebundle_005flock-and-_002ebundle_005funlock" href="Bundle-directives.html#g_t_002ebundle_005flock-and-_002ebundle_005funlock">7.9.2 <code>.bundle_lock</code> and <code>.bundle_unlock</code></a></li>
     </ul></li>
-    <li><a name="toc-_002ebyte-expressions" href="Byte.html#Byte">7.9 <code>.byte <var>expressions</var></code></a></li>
-    <li><a name="toc-CFI-directives-1" href="CFI-directives.html#CFI-directives">7.10 CFI directives</a>
+    <li><a name="toc-_002ebyte-expressions" href="Byte.html#Byte">7.10 <code>.byte <var>expressions</var></code></a></li>
+    <li><a name="toc-CFI-directives-1" href="CFI-directives.html#CFI-directives">7.11 CFI directives</a>
     <ul class="no-bullet">
-      <li><a name="toc-_002ecfi_005fsections-section_005flist" href="CFI-directives.html#g_t_002ecfi_005fsections-section_005flist">7.10.1 <code>.cfi_sections <var>section_list</var></code></a></li>
-      <li><a name="toc-_002ecfi_005fstartproc-_005bsimple_005d" href="CFI-directives.html#g_t_002ecfi_005fstartproc-_005bsimple_005d">7.10.2 <code>.cfi_startproc [simple]</code></a></li>
-      <li><a name="toc-_002ecfi_005fendproc" href="CFI-directives.html#g_t_002ecfi_005fendproc">7.10.3 <code>.cfi_endproc</code></a></li>
-      <li><a name="toc-_002ecfi_005fpersonality-encoding-_005b_002c-exp_005d" href="CFI-directives.html#g_t_002ecfi_005fpersonality-encoding-_005b_002c-exp_005d">7.10.4 <code>.cfi_personality <var>encoding</var> [, <var>exp</var>]</code></a></li>
-      <li><a name="toc-_002ecfi_005fpersonality_005fid-id" href="CFI-directives.html#g_t_002ecfi_005fpersonality_005fid-id">7.10.5 <code>.cfi_personality_id <var>id</var></code></a></li>
-      <li><a name="toc-_002ecfi_005ffde_005fdata-_005bopcode1-_005b_002c-_2026_005d_005d" href="CFI-directives.html#g_t_002ecfi_005ffde_005fdata-_005bopcode1-_005b_002c-_2026_005d_005d">7.10.6 <code>.cfi_fde_data [<var>opcode1</var> [, &hellip;]]</code></a></li>
-      <li><a name="toc-_002ecfi_005flsda-encoding-_005b_002c-exp_005d" href="CFI-directives.html#g_t_002ecfi_005flsda-encoding-_005b_002c-exp_005d">7.10.7 <code>.cfi_lsda <var>encoding</var> [, <var>exp</var>]</code></a></li>
-      <li><a name="toc-_002ecfi_005finline_005flsda-_005balign_005d" href="CFI-directives.html#g_t_002ecfi_005finline_005flsda-_005balign_005d">7.10.8 <code>.cfi_inline_lsda</code> [<var>align</var>]</a></li>
-      <li><a name="toc-_002ecfi_005fdef_005fcfa-register_002c-offset" href="CFI-directives.html#g_t_002ecfi_005fdef_005fcfa-register_002c-offset">7.10.9 <code>.cfi_def_cfa <var>register</var>, <var>offset</var></code></a></li>
-      <li><a name="toc-_002ecfi_005fdef_005fcfa_005fregister-register" href="CFI-directives.html#g_t_002ecfi_005fdef_005fcfa_005fregister-register">7.10.10 <code>.cfi_def_cfa_register <var>register</var></code></a></li>
-      <li><a name="toc-_002ecfi_005fdef_005fcfa_005foffset-offset" href="CFI-directives.html#g_t_002ecfi_005fdef_005fcfa_005foffset-offset">7.10.11 <code>.cfi_def_cfa_offset <var>offset</var></code></a></li>
-      <li><a name="toc-_002ecfi_005fadjust_005fcfa_005foffset-offset" href="CFI-directives.html#g_t_002ecfi_005fadjust_005fcfa_005foffset-offset">7.10.12 <code>.cfi_adjust_cfa_offset <var>offset</var></code></a></li>
-      <li><a name="toc-_002ecfi_005foffset-register_002c-offset" href="CFI-directives.html#g_t_002ecfi_005foffset-register_002c-offset">7.10.13 <code>.cfi_offset <var>register</var>, <var>offset</var></code></a></li>
-      <li><a name="toc-_002ecfi_005fval_005foffset-register_002c-offset" href="CFI-directives.html#g_t_002ecfi_005fval_005foffset-register_002c-offset">7.10.14 <code>.cfi_val_offset <var>register</var>, <var>offset</var></code></a></li>
-      <li><a name="toc-_002ecfi_005frel_005foffset-register_002c-offset" href="CFI-directives.html#g_t_002ecfi_005frel_005foffset-register_002c-offset">7.10.15 <code>.cfi_rel_offset <var>register</var>, <var>offset</var></code></a></li>
-      <li><a name="toc-_002ecfi_005fregister-register1_002c-register2" href="CFI-directives.html#g_t_002ecfi_005fregister-register1_002c-register2">7.10.16 <code>.cfi_register <var>register1</var>, <var>register2</var></code></a></li>
-      <li><a name="toc-_002ecfi_005frestore-register" href="CFI-directives.html#g_t_002ecfi_005frestore-register">7.10.17 <code>.cfi_restore <var>register</var></code></a></li>
-      <li><a name="toc-_002ecfi_005fundefined-register" href="CFI-directives.html#g_t_002ecfi_005fundefined-register">7.10.18 <code>.cfi_undefined <var>register</var></code></a></li>
-      <li><a name="toc-_002ecfi_005fsame_005fvalue-register" href="CFI-directives.html#g_t_002ecfi_005fsame_005fvalue-register">7.10.19 <code>.cfi_same_value <var>register</var></code></a></li>
-      <li><a name="toc-_002ecfi_005fremember_005fstate-and-_002ecfi_005frestore_005fstate" href="CFI-directives.html#g_t_002ecfi_005fremember_005fstate-and-_002ecfi_005frestore_005fstate">7.10.20 <code>.cfi_remember_state</code> and <code>.cfi_restore_state</code></a></li>
-      <li><a name="toc-_002ecfi_005freturn_005fcolumn-register" href="CFI-directives.html#g_t_002ecfi_005freturn_005fcolumn-register">7.10.21 <code>.cfi_return_column <var>register</var></code></a></li>
-      <li><a name="toc-_002ecfi_005fsignal_005fframe" href="CFI-directives.html#g_t_002ecfi_005fsignal_005fframe">7.10.22 <code>.cfi_signal_frame</code></a></li>
-      <li><a name="toc-_002ecfi_005fwindow_005fsave" href="CFI-directives.html#g_t_002ecfi_005fwindow_005fsave">7.10.23 <code>.cfi_window_save</code></a></li>
-      <li><a name="toc-_002ecfi_005fescape-expression_005b_002c-_2026_005d" href="CFI-directives.html#g_t_002ecfi_005fescape-expression_005b_002c-_2026_005d">7.10.24 <code>.cfi_escape</code> <var>expression</var>[, &hellip;]</a></li>
-      <li><a name="toc-_002ecfi_005fval_005fencoded_005faddr-register_002c-encoding_002c-label" href="CFI-directives.html#g_t_002ecfi_005fval_005fencoded_005faddr-register_002c-encoding_002c-label">7.10.25 <code>.cfi_val_encoded_addr <var>register</var>, <var>encoding</var>, <var>label</var></code></a></li>
+      <li><a name="toc-_002ecfi_005fsections-section_005flist" href="CFI-directives.html#g_t_002ecfi_005fsections-section_005flist">7.11.1 <code>.cfi_sections <var>section_list</var></code></a></li>
+      <li><a name="toc-_002ecfi_005fstartproc-_005bsimple_005d" href="CFI-directives.html#g_t_002ecfi_005fstartproc-_005bsimple_005d">7.11.2 <code>.cfi_startproc [simple]</code></a></li>
+      <li><a name="toc-_002ecfi_005fendproc" href="CFI-directives.html#g_t_002ecfi_005fendproc">7.11.3 <code>.cfi_endproc</code></a></li>
+      <li><a name="toc-_002ecfi_005fpersonality-encoding-_005b_002c-exp_005d" href="CFI-directives.html#g_t_002ecfi_005fpersonality-encoding-_005b_002c-exp_005d">7.11.4 <code>.cfi_personality <var>encoding</var> [, <var>exp</var>]</code></a></li>
+      <li><a name="toc-_002ecfi_005fpersonality_005fid-id" href="CFI-directives.html#g_t_002ecfi_005fpersonality_005fid-id">7.11.5 <code>.cfi_personality_id <var>id</var></code></a></li>
+      <li><a name="toc-_002ecfi_005ffde_005fdata-_005bopcode1-_005b_002c-_2026_005d_005d" href="CFI-directives.html#g_t_002ecfi_005ffde_005fdata-_005bopcode1-_005b_002c-_2026_005d_005d">7.11.6 <code>.cfi_fde_data [<var>opcode1</var> [, &hellip;]]</code></a></li>
+      <li><a name="toc-_002ecfi_005flsda-encoding-_005b_002c-exp_005d" href="CFI-directives.html#g_t_002ecfi_005flsda-encoding-_005b_002c-exp_005d">7.11.7 <code>.cfi_lsda <var>encoding</var> [, <var>exp</var>]</code></a></li>
+      <li><a name="toc-_002ecfi_005finline_005flsda-_005balign_005d" href="CFI-directives.html#g_t_002ecfi_005finline_005flsda-_005balign_005d">7.11.8 <code>.cfi_inline_lsda</code> [<var>align</var>]</a></li>
+      <li><a name="toc-_002ecfi_005fdef_005fcfa-register_002c-offset" href="CFI-directives.html#g_t_002ecfi_005fdef_005fcfa-register_002c-offset">7.11.9 <code>.cfi_def_cfa <var>register</var>, <var>offset</var></code></a></li>
+      <li><a name="toc-_002ecfi_005fdef_005fcfa_005fregister-register" href="CFI-directives.html#g_t_002ecfi_005fdef_005fcfa_005fregister-register">7.11.10 <code>.cfi_def_cfa_register <var>register</var></code></a></li>
+      <li><a name="toc-_002ecfi_005fdef_005fcfa_005foffset-offset" href="CFI-directives.html#g_t_002ecfi_005fdef_005fcfa_005foffset-offset">7.11.11 <code>.cfi_def_cfa_offset <var>offset</var></code></a></li>
+      <li><a name="toc-_002ecfi_005fadjust_005fcfa_005foffset-offset" href="CFI-directives.html#g_t_002ecfi_005fadjust_005fcfa_005foffset-offset">7.11.12 <code>.cfi_adjust_cfa_offset <var>offset</var></code></a></li>
+      <li><a name="toc-_002ecfi_005foffset-register_002c-offset" href="CFI-directives.html#g_t_002ecfi_005foffset-register_002c-offset">7.11.13 <code>.cfi_offset <var>register</var>, <var>offset</var></code></a></li>
+      <li><a name="toc-_002ecfi_005fval_005foffset-register_002c-offset" href="CFI-directives.html#g_t_002ecfi_005fval_005foffset-register_002c-offset">7.11.14 <code>.cfi_val_offset <var>register</var>, <var>offset</var></code></a></li>
+      <li><a name="toc-_002ecfi_005frel_005foffset-register_002c-offset" href="CFI-directives.html#g_t_002ecfi_005frel_005foffset-register_002c-offset">7.11.15 <code>.cfi_rel_offset <var>register</var>, <var>offset</var></code></a></li>
+      <li><a name="toc-_002ecfi_005fregister-register1_002c-register2" href="CFI-directives.html#g_t_002ecfi_005fregister-register1_002c-register2">7.11.16 <code>.cfi_register <var>register1</var>, <var>register2</var></code></a></li>
+      <li><a name="toc-_002ecfi_005frestore-register" href="CFI-directives.html#g_t_002ecfi_005frestore-register">7.11.17 <code>.cfi_restore <var>register</var></code></a></li>
+      <li><a name="toc-_002ecfi_005fundefined-register" href="CFI-directives.html#g_t_002ecfi_005fundefined-register">7.11.18 <code>.cfi_undefined <var>register</var></code></a></li>
+      <li><a name="toc-_002ecfi_005fsame_005fvalue-register" href="CFI-directives.html#g_t_002ecfi_005fsame_005fvalue-register">7.11.19 <code>.cfi_same_value <var>register</var></code></a></li>
+      <li><a name="toc-_002ecfi_005fremember_005fstate-and-_002ecfi_005frestore_005fstate" href="CFI-directives.html#g_t_002ecfi_005fremember_005fstate-and-_002ecfi_005frestore_005fstate">7.11.20 <code>.cfi_remember_state</code> and <code>.cfi_restore_state</code></a></li>
+      <li><a name="toc-_002ecfi_005freturn_005fcolumn-register" href="CFI-directives.html#g_t_002ecfi_005freturn_005fcolumn-register">7.11.21 <code>.cfi_return_column <var>register</var></code></a></li>
+      <li><a name="toc-_002ecfi_005fsignal_005fframe" href="CFI-directives.html#g_t_002ecfi_005fsignal_005fframe">7.11.22 <code>.cfi_signal_frame</code></a></li>
+      <li><a name="toc-_002ecfi_005fwindow_005fsave" href="CFI-directives.html#g_t_002ecfi_005fwindow_005fsave">7.11.23 <code>.cfi_window_save</code></a></li>
+      <li><a name="toc-_002ecfi_005fescape-expression_005b_002c-_2026_005d" href="CFI-directives.html#g_t_002ecfi_005fescape-expression_005b_002c-_2026_005d">7.11.24 <code>.cfi_escape</code> <var>expression</var>[, &hellip;]</a></li>
+      <li><a name="toc-_002ecfi_005fval_005fencoded_005faddr-register_002c-encoding_002c-label" href="CFI-directives.html#g_t_002ecfi_005fval_005fencoded_005faddr-register_002c-encoding_002c-label">7.11.25 <code>.cfi_val_encoded_addr <var>register</var>, <var>encoding</var>, <var>label</var></code></a></li>
     </ul></li>
-    <li><a name="toc-_002ecomm-symbol-_002c-length-" href="Comm.html#Comm">7.11 <code>.comm <var>symbol</var> , <var>length</var> </code></a></li>
-    <li><a name="toc-_002edata-subsection" href="Data.html#Data">7.12 <code>.data <var>subsection</var></code></a></li>
-    <li><a name="toc-_002edc_005bsize_005d-expressions" href="Dc.html#Dc">7.13 <code>.dc[<var>size</var>] <var>expressions</var></code></a></li>
-    <li><a name="toc-_002edcb_005bsize_005d-number-_005b_002cfill_005d" href="Dcb.html#Dcb">7.14 <code>.dcb[<var>size</var>] <var>number</var> [,<var>fill</var>]</code></a></li>
-    <li><a name="toc-_002eds_005bsize_005d-number-_005b_002cfill_005d" href="Ds.html#Ds">7.15 <code>.ds[<var>size</var>] <var>number</var> [,<var>fill</var>]</code></a></li>
-    <li><a name="toc-_002edef-name" href="Def.html#Def">7.16 <code>.def <var>name</var></code></a></li>
-    <li><a name="toc-_002edesc-symbol_002c-abs_002dexpression" href="Desc.html#Desc">7.17 <code>.desc <var>symbol</var>, <var>abs-expression</var></code></a></li>
-    <li><a name="toc-_002edim" href="Dim.html#Dim">7.18 <code>.dim</code></a></li>
-    <li><a name="toc-_002edouble-flonums" href="Double.html#Double">7.19 <code>.double <var>flonums</var></code></a></li>
-    <li><a name="toc-_002eeject" href="Eject.html#Eject">7.20 <code>.eject</code></a></li>
-    <li><a name="toc-_002eelse" href="Else.html#Else">7.21 <code>.else</code></a></li>
-    <li><a name="toc-_002eelseif" href="Elseif.html#Elseif">7.22 <code>.elseif</code></a></li>
-    <li><a name="toc-_002eend" href="End.html#End">7.23 <code>.end</code></a></li>
-    <li><a name="toc-_002eendef" href="Endef.html#Endef">7.24 <code>.endef</code></a></li>
-    <li><a name="toc-_002eendfunc" href="Endfunc.html#Endfunc">7.25 <code>.endfunc</code></a></li>
-    <li><a name="toc-_002eendif" href="Endif.html#Endif">7.26 <code>.endif</code></a></li>
-    <li><a name="toc-_002eequ-symbol_002c-expression" href="Equ.html#Equ">7.27 <code>.equ <var>symbol</var>, <var>expression</var></code></a></li>
-    <li><a name="toc-_002eequiv-symbol_002c-expression" href="Equiv.html#Equiv">7.28 <code>.equiv <var>symbol</var>, <var>expression</var></code></a></li>
-    <li><a name="toc-_002eeqv-symbol_002c-expression" href="Eqv.html#Eqv">7.29 <code>.eqv <var>symbol</var>, <var>expression</var></code></a></li>
-    <li><a name="toc-_002eerr" href="Err.html#Err">7.30 <code>.err</code></a></li>
-    <li><a name="toc-_002eerror-_0022string_0022" href="Error.html#Error">7.31 <code>.error &quot;<var>string</var>&quot;</code></a></li>
-    <li><a name="toc-_002eexitm" href="Exitm.html#Exitm">7.32 <code>.exitm</code></a></li>
-    <li><a name="toc-_002eextern" href="Extern.html#Extern">7.33 <code>.extern</code></a></li>
-    <li><a name="toc-_002efail-expression" href="Fail.html#Fail">7.34 <code>.fail <var>expression</var></code></a></li>
-    <li><a name="toc-_002efile" href="File.html#File">7.35 <code>.file</code></a></li>
-    <li><a name="toc-_002efill-repeat-_002c-size-_002c-value" href="Fill.html#Fill">7.36 <code>.fill <var>repeat</var> , <var>size</var> , <var>value</var></code></a></li>
-    <li><a name="toc-_002efloat-flonums" href="Float.html#Float">7.37 <code>.float <var>flonums</var></code></a></li>
-    <li><a name="toc-_002efunc-name_005b_002clabel_005d" href="Func.html#Func">7.38 <code>.func <var>name</var>[,<var>label</var>]</code></a></li>
-    <li><a name="toc-_002eglobal-symbol_002c-_002eglobl-symbol" href="Global.html#Global">7.39 <code>.global <var>symbol</var></code>, <code>.globl <var>symbol</var></code></a></li>
-    <li><a name="toc-_002egnu_005fattribute-tag_002cvalue" href="Gnu_005fattribute.html#Gnu_005fattribute">7.40 <code>.gnu_attribute <var>tag</var>,<var>value</var></code></a></li>
-    <li><a name="toc-_002ehidden-names" href="Hidden.html#Hidden">7.41 <code>.hidden <var>names</var></code></a></li>
-    <li><a name="toc-_002ehword-expressions" href="hword.html#hword">7.42 <code>.hword <var>expressions</var></code></a></li>
-    <li><a name="toc-_002eident" href="Ident.html#Ident">7.43 <code>.ident</code></a></li>
-    <li><a name="toc-_002eif-absolute-expression" href="If.html#If">7.44 <code>.if <var>absolute expression</var></code></a></li>
-    <li><a name="toc-_002eincbin-_0022file_0022_005b_002cskip_005b_002ccount_005d_005d" href="Incbin.html#Incbin">7.45 <code>.incbin &quot;<var>file</var>&quot;[,<var>skip</var>[,<var>count</var>]]</code></a></li>
-    <li><a name="toc-_002einclude-_0022file_0022" href="Include.html#Include">7.46 <code>.include &quot;<var>file</var>&quot;</code></a></li>
-    <li><a name="toc-_002eint-expressions" href="Int.html#Int">7.47 <code>.int <var>expressions</var></code></a></li>
-    <li><a name="toc-_002einternal-names" href="Internal.html#Internal">7.48 <code>.internal <var>names</var></code></a></li>
-    <li><a name="toc-_002eirp-symbol_002cvalues_2026" href="Irp.html#Irp">7.49 <code>.irp <var>symbol</var>,<var>values</var></code>&hellip;</a></li>
-    <li><a name="toc-_002eirpc-symbol_002cvalues_2026" href="Irpc.html#Irpc">7.50 <code>.irpc <var>symbol</var>,<var>values</var></code>&hellip;</a></li>
-    <li><a name="toc-_002elcomm-symbol-_002c-length" href="Lcomm.html#Lcomm">7.51 <code>.lcomm <var>symbol</var> , <var>length</var></code></a></li>
-    <li><a name="toc-_002elflags" href="Lflags.html#Lflags">7.52 <code>.lflags</code></a></li>
-    <li><a name="toc-_002eline-line_002dnumber" href="Line.html#Line">7.53 <code>.line <var>line-number</var></code></a></li>
-    <li><a name="toc-_002elinkonce-_005btype_005d" href="Linkonce.html#Linkonce">7.54 <code>.linkonce [<var>type</var>]</code></a></li>
-    <li><a name="toc-_002elist" href="List.html#List">7.55 <code>.list</code></a></li>
-    <li><a name="toc-_002eln-line_002dnumber" href="Ln.html#Ln">7.56 <code>.ln <var>line-number</var></code></a></li>
-    <li><a name="toc-_002eloc-fileno-lineno-_005bcolumn_005d-_005boptions_005d" href="Loc.html#Loc">7.57 <code>.loc <var>fileno</var> <var>lineno</var> [<var>column</var>] [<var>options</var>]</code></a></li>
-    <li><a name="toc-_002eloc_005fmark_005flabels-enable" href="Loc_005fmark_005flabels.html#Loc_005fmark_005flabels">7.58 <code>.loc_mark_labels <var>enable</var></code></a></li>
-    <li><a name="toc-_002elocal-names" href="Local.html#Local">7.59 <code>.local <var>names</var></code></a></li>
-    <li><a name="toc-_002elong-expressions" href="Long.html#Long">7.60 <code>.long <var>expressions</var></code></a></li>
-    <li><a name="toc-_002emacro" href="Macro.html#Macro">7.61 <code>.macro</code></a></li>
-    <li><a name="toc-_002emri-val" href="MRI.html#MRI">7.62 <code>.mri <var>val</var></code></a></li>
-    <li><a name="toc-_002enoaltmacro" href="Noaltmacro.html#Noaltmacro">7.63 <code>.noaltmacro</code></a></li>
-    <li><a name="toc-_002enolist" href="Nolist.html#Nolist">7.64 <code>.nolist</code></a></li>
-    <li><a name="toc-_002enop" href="Nop.html#Nop">7.65 <code>.nop</code></a></li>
-    <li><a name="toc-_002enops-size_005b_002c-control_005d" href="Nops.html#Nops">7.66 <code>.nops <var>size</var>[, <var>control</var>]</code></a></li>
-    <li><a name="toc-_002eocta-bignums" href="Octa.html#Octa">7.67 <code>.octa <var>bignums</var></code></a></li>
-    <li><a name="toc-_002eoffset-loc" href="Offset.html#Offset">7.68 <code>.offset <var>loc</var></code></a></li>
-    <li><a name="toc-_002eorg-new_002dlc-_002c-fill" href="Org.html#Org">7.69 <code>.org <var>new-lc</var> , <var>fill</var></code></a></li>
-    <li><a name="toc-_002ep2align_005bwl_005d-_005babs_002dexpr_005b_002c-abs_002dexpr_005b_002c-abs_002dexpr_005d_005d_005d" href="P2align.html#P2align">7.70 <code>.p2align[wl] [<var>abs-expr</var>[, <var>abs-expr</var>[, <var>abs-expr</var>]]]</code></a></li>
-    <li><a name="toc-_002epopsection" href="PopSection.html#PopSection">7.71 <code>.popsection</code></a></li>
-    <li><a name="toc-_002eprevious" href="Previous.html#Previous">7.72 <code>.previous</code></a></li>
-    <li><a name="toc-_002eprint-string" href="Print.html#Print">7.73 <code>.print <var>string</var></code></a></li>
-    <li><a name="toc-_002eprotected-names" href="Protected.html#Protected">7.74 <code>.protected <var>names</var></code></a></li>
-    <li><a name="toc-_002epsize-lines-_002c-columns" href="Psize.html#Psize">7.75 <code>.psize <var>lines</var> , <var>columns</var></code></a></li>
-    <li><a name="toc-_002epurgem-name" href="Purgem.html#Purgem">7.76 <code>.purgem <var>name</var></code></a></li>
-    <li><a name="toc-_002epushsection-name-_005b_002c-subsection_005d-_005b_002c-_0022flags_0022_005b_002c-_0040type_005b_002carguments_005d_005d_005d" href="PushSection.html#PushSection">7.77 <code>.pushsection <var>name</var> [, <var>subsection</var>] [, &quot;<var>flags</var>&quot;[, @<var>type</var>[,<var>arguments</var>]]]</code></a></li>
-    <li><a name="toc-_002equad-bignums" href="Quad.html#Quad">7.78 <code>.quad <var>bignums</var></code></a></li>
-    <li><a name="toc-_002ereloc-offset_002c-reloc_005fname_005b_002c-expression_005d" href="Reloc.html#Reloc">7.79 <code>.reloc <var>offset</var>, <var>reloc_name</var>[, <var>expression</var>]</code></a></li>
-    <li><a name="toc-_002erept-count" href="Rept.html#Rept">7.80 <code>.rept <var>count</var></code></a></li>
-    <li><a name="toc-_002esbttl-_0022subheading_0022" href="Sbttl.html#Sbttl">7.81 <code>.sbttl &quot;<var>subheading</var>&quot;</code></a></li>
-    <li><a name="toc-_002escl-class" href="Scl.html#Scl">7.82 <code>.scl <var>class</var></code></a></li>
-    <li><a name="toc-_002esection-name" href="Section.html#Section">7.83 <code>.section <var>name</var></code></a></li>
-    <li><a name="toc-_002eset-symbol_002c-expression" href="Set.html#Set">7.84 <code>.set <var>symbol</var>, <var>expression</var></code></a></li>
-    <li><a name="toc-_002eshort-expressions" href="Short.html#Short">7.85 <code>.short <var>expressions</var></code></a></li>
-    <li><a name="toc-_002esingle-flonums" href="Single.html#Single">7.86 <code>.single <var>flonums</var></code></a></li>
-    <li><a name="toc-_002esize" href="Size.html#Size">7.87 <code>.size</code></a></li>
-    <li><a name="toc-_002eskip-size-_005b_002cfill_005d" href="Skip.html#Skip">7.88 <code>.skip <var>size</var> [,<var>fill</var>]</code></a></li>
-    <li><a name="toc-_002esleb128-expressions" href="Sleb128.html#Sleb128">7.89 <code>.sleb128 <var>expressions</var></code></a></li>
-    <li><a name="toc-_002espace-size-_005b_002cfill_005d" href="Space.html#Space">7.90 <code>.space <var>size</var> [,<var>fill</var>]</code></a></li>
-    <li><a name="toc-_002estabd_002c-_002estabn_002c-_002estabs" href="Stab.html#Stab">7.91 <code>.stabd, .stabn, .stabs</code></a></li>
-    <li><a name="toc-_002estring-_0022str_0022_002c-_002estring8-_0022str_0022_002c-_002estring16" href="String.html#String">7.92 <code>.string</code> &quot;<var>str</var>&quot;, <code>.string8</code> &quot;<var>str</var>&quot;, <code>.string16</code></a></li>
-    <li><a name="toc-_002estruct-expression" href="Struct.html#Struct">7.93 <code>.struct <var>expression</var></code></a></li>
-    <li><a name="toc-_002esubsection-name" href="SubSection.html#SubSection">7.94 <code>.subsection <var>name</var></code></a></li>
-    <li><a name="toc-_002esymver" href="Symver.html#Symver">7.95 <code>.symver</code></a></li>
-    <li><a name="toc-_002etag-structname" href="Tag.html#Tag">7.96 <code>.tag <var>structname</var></code></a></li>
-    <li><a name="toc-_002etext-subsection" href="Text.html#Text">7.97 <code>.text <var>subsection</var></code></a></li>
-    <li><a name="toc-_002etitle-_0022heading_0022" href="Title.html#Title">7.98 <code>.title &quot;<var>heading</var>&quot;</code></a></li>
-    <li><a name="toc-_002etype" href="Type.html#Type">7.99 <code>.type</code></a></li>
-    <li><a name="toc-_002euleb128-expressions" href="Uleb128.html#Uleb128">7.100 <code>.uleb128 <var>expressions</var></code></a></li>
-    <li><a name="toc-_002eval-addr" href="Val.html#Val">7.101 <code>.val <var>addr</var></code></a></li>
-    <li><a name="toc-_002eversion-_0022string_0022" href="Version.html#Version">7.102 <code>.version &quot;<var>string</var>&quot;</code></a></li>
-    <li><a name="toc-_002evtable_005fentry-table_002c-offset" href="VTableEntry.html#VTableEntry">7.103 <code>.vtable_entry <var>table</var>, <var>offset</var></code></a></li>
-    <li><a name="toc-_002evtable_005finherit-child_002c-parent" href="VTableInherit.html#VTableInherit">7.104 <code>.vtable_inherit <var>child</var>, <var>parent</var></code></a></li>
-    <li><a name="toc-_002ewarning-_0022string_0022" href="Warning.html#Warning">7.105 <code>.warning &quot;<var>string</var>&quot;</code></a></li>
-    <li><a name="toc-_002eweak-names" href="Weak.html#Weak">7.106 <code>.weak <var>names</var></code></a></li>
-    <li><a name="toc-_002eweakref-alias_002c-target" href="Weakref.html#Weakref">7.107 <code>.weakref <var>alias</var>, <var>target</var></code></a></li>
-    <li><a name="toc-_002eword-expressions" href="Word.html#Word">7.108 <code>.word <var>expressions</var></code></a></li>
-    <li><a name="toc-_002ezero-size" href="Zero.html#Zero">7.109 <code>.zero <var>size</var></code></a></li>
-    <li><a name="toc-_002e2byte-expression-_005b_002c-expression_005d_002a" href="2byte.html#g_t2byte">7.110 <code>.2byte <var>expression</var> [, <var>expression</var>]*</code></a></li>
-    <li><a name="toc-_002e4byte-expression-_005b_002c-expression_005d_002a" href="4byte.html#g_t4byte">7.111 <code>.4byte <var>expression</var> [, <var>expression</var>]*</code></a></li>
-    <li><a name="toc-_002e8byte-expression-_005b_002c-expression_005d_002a" href="8byte.html#g_t8byte">7.112 <code>.8byte <var>expression</var> [, <var>expression</var>]*</code></a></li>
-    <li><a name="toc-Deprecated-Directives" href="Deprecated.html#Deprecated">7.113 Deprecated Directives</a></li>
+    <li><a name="toc-_002ecomm-symbol-_002c-length-" href="Comm.html#Comm">7.12 <code>.comm <var>symbol</var> , <var>length</var> </code></a></li>
+    <li><a name="toc-_002edata-subsection" href="Data.html#Data">7.13 <code>.data <var>subsection</var></code></a></li>
+    <li><a name="toc-_002edc_005bsize_005d-expressions" href="Dc.html#Dc">7.14 <code>.dc[<var>size</var>] <var>expressions</var></code></a></li>
+    <li><a name="toc-_002edcb_005bsize_005d-number-_005b_002cfill_005d" href="Dcb.html#Dcb">7.15 <code>.dcb[<var>size</var>] <var>number</var> [,<var>fill</var>]</code></a></li>
+    <li><a name="toc-_002eds_005bsize_005d-number-_005b_002cfill_005d" href="Ds.html#Ds">7.16 <code>.ds[<var>size</var>] <var>number</var> [,<var>fill</var>]</code></a></li>
+    <li><a name="toc-_002edef-name" href="Def.html#Def">7.17 <code>.def <var>name</var></code></a></li>
+    <li><a name="toc-_002edesc-symbol_002c-abs_002dexpression" href="Desc.html#Desc">7.18 <code>.desc <var>symbol</var>, <var>abs-expression</var></code></a></li>
+    <li><a name="toc-_002edim" href="Dim.html#Dim">7.19 <code>.dim</code></a></li>
+    <li><a name="toc-_002edouble-flonums" href="Double.html#Double">7.20 <code>.double <var>flonums</var></code></a></li>
+    <li><a name="toc-_002eeject" href="Eject.html#Eject">7.21 <code>.eject</code></a></li>
+    <li><a name="toc-_002eelse" href="Else.html#Else">7.22 <code>.else</code></a></li>
+    <li><a name="toc-_002eelseif" href="Elseif.html#Elseif">7.23 <code>.elseif</code></a></li>
+    <li><a name="toc-_002eend" href="End.html#End">7.24 <code>.end</code></a></li>
+    <li><a name="toc-_002eendef" href="Endef.html#Endef">7.25 <code>.endef</code></a></li>
+    <li><a name="toc-_002eendfunc" href="Endfunc.html#Endfunc">7.26 <code>.endfunc</code></a></li>
+    <li><a name="toc-_002eendif" href="Endif.html#Endif">7.27 <code>.endif</code></a></li>
+    <li><a name="toc-_002eequ-symbol_002c-expression" href="Equ.html#Equ">7.28 <code>.equ <var>symbol</var>, <var>expression</var></code></a></li>
+    <li><a name="toc-_002eequiv-symbol_002c-expression" href="Equiv.html#Equiv">7.29 <code>.equiv <var>symbol</var>, <var>expression</var></code></a></li>
+    <li><a name="toc-_002eeqv-symbol_002c-expression" href="Eqv.html#Eqv">7.30 <code>.eqv <var>symbol</var>, <var>expression</var></code></a></li>
+    <li><a name="toc-_002eerr" href="Err.html#Err">7.31 <code>.err</code></a></li>
+    <li><a name="toc-_002eerror-_0022string_0022" href="Error.html#Error">7.32 <code>.error &quot;<var>string</var>&quot;</code></a></li>
+    <li><a name="toc-_002eexitm" href="Exitm.html#Exitm">7.33 <code>.exitm</code></a></li>
+    <li><a name="toc-_002eextern" href="Extern.html#Extern">7.34 <code>.extern</code></a></li>
+    <li><a name="toc-_002efail-expression" href="Fail.html#Fail">7.35 <code>.fail <var>expression</var></code></a></li>
+    <li><a name="toc-_002efile" href="File.html#File">7.36 <code>.file</code></a></li>
+    <li><a name="toc-_002efill-repeat-_002c-size-_002c-value" href="Fill.html#Fill">7.37 <code>.fill <var>repeat</var> , <var>size</var> , <var>value</var></code></a></li>
+    <li><a name="toc-_002efloat-flonums" href="Float.html#Float">7.38 <code>.float <var>flonums</var></code></a></li>
+    <li><a name="toc-_002efunc-name_005b_002clabel_005d" href="Func.html#Func">7.39 <code>.func <var>name</var>[,<var>label</var>]</code></a></li>
+    <li><a name="toc-_002eglobal-symbol_002c-_002eglobl-symbol" href="Global.html#Global">7.40 <code>.global <var>symbol</var></code>, <code>.globl <var>symbol</var></code></a></li>
+    <li><a name="toc-_002egnu_005fattribute-tag_002cvalue" href="Gnu_005fattribute.html#Gnu_005fattribute">7.41 <code>.gnu_attribute <var>tag</var>,<var>value</var></code></a></li>
+    <li><a name="toc-_002ehidden-names" href="Hidden.html#Hidden">7.42 <code>.hidden <var>names</var></code></a></li>
+    <li><a name="toc-_002ehword-expressions" href="hword.html#hword">7.43 <code>.hword <var>expressions</var></code></a></li>
+    <li><a name="toc-_002eident" href="Ident.html#Ident">7.44 <code>.ident</code></a></li>
+    <li><a name="toc-_002eif-absolute-expression" href="If.html#If">7.45 <code>.if <var>absolute expression</var></code></a></li>
+    <li><a name="toc-_002eincbin-_0022file_0022_005b_002cskip_005b_002ccount_005d_005d" href="Incbin.html#Incbin">7.46 <code>.incbin &quot;<var>file</var>&quot;[,<var>skip</var>[,<var>count</var>]]</code></a></li>
+    <li><a name="toc-_002einclude-_0022file_0022" href="Include.html#Include">7.47 <code>.include &quot;<var>file</var>&quot;</code></a></li>
+    <li><a name="toc-_002eint-expressions" href="Int.html#Int">7.48 <code>.int <var>expressions</var></code></a></li>
+    <li><a name="toc-_002einternal-names" href="Internal.html#Internal">7.49 <code>.internal <var>names</var></code></a></li>
+    <li><a name="toc-_002eirp-symbol_002cvalues_2026" href="Irp.html#Irp">7.50 <code>.irp <var>symbol</var>,<var>values</var></code>&hellip;</a></li>
+    <li><a name="toc-_002eirpc-symbol_002cvalues_2026" href="Irpc.html#Irpc">7.51 <code>.irpc <var>symbol</var>,<var>values</var></code>&hellip;</a></li>
+    <li><a name="toc-_002elcomm-symbol-_002c-length" href="Lcomm.html#Lcomm">7.52 <code>.lcomm <var>symbol</var> , <var>length</var></code></a></li>
+    <li><a name="toc-_002elflags" href="Lflags.html#Lflags">7.53 <code>.lflags</code></a></li>
+    <li><a name="toc-_002eline-line_002dnumber" href="Line.html#Line">7.54 <code>.line <var>line-number</var></code></a></li>
+    <li><a name="toc-_002elinkonce-_005btype_005d" href="Linkonce.html#Linkonce">7.55 <code>.linkonce [<var>type</var>]</code></a></li>
+    <li><a name="toc-_002elist" href="List.html#List">7.56 <code>.list</code></a></li>
+    <li><a name="toc-_002eln-line_002dnumber" href="Ln.html#Ln">7.57 <code>.ln <var>line-number</var></code></a></li>
+    <li><a name="toc-_002eloc-fileno-lineno-_005bcolumn_005d-_005boptions_005d" href="Loc.html#Loc">7.58 <code>.loc <var>fileno</var> <var>lineno</var> [<var>column</var>] [<var>options</var>]</code></a></li>
+    <li><a name="toc-_002eloc_005fmark_005flabels-enable" href="Loc_005fmark_005flabels.html#Loc_005fmark_005flabels">7.59 <code>.loc_mark_labels <var>enable</var></code></a></li>
+    <li><a name="toc-_002elocal-names" href="Local.html#Local">7.60 <code>.local <var>names</var></code></a></li>
+    <li><a name="toc-_002elong-expressions" href="Long.html#Long">7.61 <code>.long <var>expressions</var></code></a></li>
+    <li><a name="toc-_002emacro" href="Macro.html#Macro">7.62 <code>.macro</code></a></li>
+    <li><a name="toc-_002emri-val" href="MRI.html#MRI">7.63 <code>.mri <var>val</var></code></a></li>
+    <li><a name="toc-_002enoaltmacro" href="Noaltmacro.html#Noaltmacro">7.64 <code>.noaltmacro</code></a></li>
+    <li><a name="toc-_002enolist" href="Nolist.html#Nolist">7.65 <code>.nolist</code></a></li>
+    <li><a name="toc-_002enop-_005bsize_005d" href="Nop.html#Nop">7.66 <code>.nop [<var>size</var>]</code></a></li>
+    <li><a name="toc-_002enops-size_005b_002c-control_005d" href="Nops.html#Nops">7.67 <code>.nops <var>size</var>[, <var>control</var>]</code></a></li>
+    <li><a name="toc-_002eocta-bignums" href="Octa.html#Octa">7.68 <code>.octa <var>bignums</var></code></a></li>
+    <li><a name="toc-_002eoffset-loc" href="Offset.html#Offset">7.69 <code>.offset <var>loc</var></code></a></li>
+    <li><a name="toc-_002eorg-new_002dlc-_002c-fill" href="Org.html#Org">7.70 <code>.org <var>new-lc</var> , <var>fill</var></code></a></li>
+    <li><a name="toc-_002ep2align_005bwl_005d-_005babs_002dexpr_005b_002c-abs_002dexpr_005b_002c-abs_002dexpr_005d_005d_005d" href="P2align.html#P2align">7.71 <code>.p2align[wl] [<var>abs-expr</var>[, <var>abs-expr</var>[, <var>abs-expr</var>]]]</code></a></li>
+    <li><a name="toc-_002epopsection" href="PopSection.html#PopSection">7.72 <code>.popsection</code></a></li>
+    <li><a name="toc-_002eprevious" href="Previous.html#Previous">7.73 <code>.previous</code></a></li>
+    <li><a name="toc-_002eprint-string" href="Print.html#Print">7.74 <code>.print <var>string</var></code></a></li>
+    <li><a name="toc-_002eprotected-names" href="Protected.html#Protected">7.75 <code>.protected <var>names</var></code></a></li>
+    <li><a name="toc-_002epsize-lines-_002c-columns" href="Psize.html#Psize">7.76 <code>.psize <var>lines</var> , <var>columns</var></code></a></li>
+    <li><a name="toc-_002epurgem-name" href="Purgem.html#Purgem">7.77 <code>.purgem <var>name</var></code></a></li>
+    <li><a name="toc-_002epushsection-name-_005b_002c-subsection_005d-_005b_002c-_0022flags_0022_005b_002c-_0040type_005b_002carguments_005d_005d_005d" href="PushSection.html#PushSection">7.78 <code>.pushsection <var>name</var> [, <var>subsection</var>] [, &quot;<var>flags</var>&quot;[, @<var>type</var>[,<var>arguments</var>]]]</code></a></li>
+    <li><a name="toc-_002equad-bignums" href="Quad.html#Quad">7.79 <code>.quad <var>bignums</var></code></a></li>
+    <li><a name="toc-_002ereloc-offset_002c-reloc_005fname_005b_002c-expression_005d" href="Reloc.html#Reloc">7.80 <code>.reloc <var>offset</var>, <var>reloc_name</var>[, <var>expression</var>]</code></a></li>
+    <li><a name="toc-_002erept-count" href="Rept.html#Rept">7.81 <code>.rept <var>count</var></code></a></li>
+    <li><a name="toc-_002esbttl-_0022subheading_0022" href="Sbttl.html#Sbttl">7.82 <code>.sbttl &quot;<var>subheading</var>&quot;</code></a></li>
+    <li><a name="toc-_002escl-class" href="Scl.html#Scl">7.83 <code>.scl <var>class</var></code></a></li>
+    <li><a name="toc-_002esection-name" href="Section.html#Section">7.84 <code>.section <var>name</var></code></a></li>
+    <li><a name="toc-_002eset-symbol_002c-expression" href="Set.html#Set">7.85 <code>.set <var>symbol</var>, <var>expression</var></code></a></li>
+    <li><a name="toc-_002eshort-expressions" href="Short.html#Short">7.86 <code>.short <var>expressions</var></code></a></li>
+    <li><a name="toc-_002esingle-flonums" href="Single.html#Single">7.87 <code>.single <var>flonums</var></code></a></li>
+    <li><a name="toc-_002esize" href="Size.html#Size">7.88 <code>.size</code></a></li>
+    <li><a name="toc-_002eskip-size-_005b_002cfill_005d" href="Skip.html#Skip">7.89 <code>.skip <var>size</var> [,<var>fill</var>]</code></a></li>
+    <li><a name="toc-_002esleb128-expressions" href="Sleb128.html#Sleb128">7.90 <code>.sleb128 <var>expressions</var></code></a></li>
+    <li><a name="toc-_002espace-size-_005b_002cfill_005d" href="Space.html#Space">7.91 <code>.space <var>size</var> [,<var>fill</var>]</code></a></li>
+    <li><a name="toc-_002estabd_002c-_002estabn_002c-_002estabs" href="Stab.html#Stab">7.92 <code>.stabd, .stabn, .stabs</code></a></li>
+    <li><a name="toc-_002estring-_0022str_0022_002c-_002estring8-_0022str_0022_002c-_002estring16" href="String.html#String">7.93 <code>.string</code> &quot;<var>str</var>&quot;, <code>.string8</code> &quot;<var>str</var>&quot;, <code>.string16</code></a></li>
+    <li><a name="toc-_002estruct-expression" href="Struct.html#Struct">7.94 <code>.struct <var>expression</var></code></a></li>
+    <li><a name="toc-_002esubsection-name" href="SubSection.html#SubSection">7.95 <code>.subsection <var>name</var></code></a></li>
+    <li><a name="toc-_002esymver" href="Symver.html#Symver">7.96 <code>.symver</code></a></li>
+    <li><a name="toc-_002etag-structname" href="Tag.html#Tag">7.97 <code>.tag <var>structname</var></code></a></li>
+    <li><a name="toc-_002etext-subsection" href="Text.html#Text">7.98 <code>.text <var>subsection</var></code></a></li>
+    <li><a name="toc-_002etitle-_0022heading_0022" href="Title.html#Title">7.99 <code>.title &quot;<var>heading</var>&quot;</code></a></li>
+    <li><a name="toc-_002etls_005fcommon-symbol_002c-length_005b_002c-alignment_005d" href="Tls_005fcommon.html#Tls_005fcommon">7.100 <code>.tls_common <var>symbol</var>, <var>length</var>[, <var>alignment</var>]</code></a></li>
+    <li><a name="toc-_002etype" href="Type.html#Type">7.101 <code>.type</code></a></li>
+    <li><a name="toc-_002euleb128-expressions" href="Uleb128.html#Uleb128">7.102 <code>.uleb128 <var>expressions</var></code></a></li>
+    <li><a name="toc-_002eval-addr" href="Val.html#Val">7.103 <code>.val <var>addr</var></code></a></li>
+    <li><a name="toc-_002eversion-_0022string_0022" href="Version.html#Version">7.104 <code>.version &quot;<var>string</var>&quot;</code></a></li>
+    <li><a name="toc-_002evtable_005fentry-table_002c-offset" href="VTableEntry.html#VTableEntry">7.105 <code>.vtable_entry <var>table</var>, <var>offset</var></code></a></li>
+    <li><a name="toc-_002evtable_005finherit-child_002c-parent" href="VTableInherit.html#VTableInherit">7.106 <code>.vtable_inherit <var>child</var>, <var>parent</var></code></a></li>
+    <li><a name="toc-_002ewarning-_0022string_0022" href="Warning.html#Warning">7.107 <code>.warning &quot;<var>string</var>&quot;</code></a></li>
+    <li><a name="toc-_002eweak-names" href="Weak.html#Weak">7.108 <code>.weak <var>names</var></code></a></li>
+    <li><a name="toc-_002eweakref-alias_002c-target" href="Weakref.html#Weakref">7.109 <code>.weakref <var>alias</var>, <var>target</var></code></a></li>
+    <li><a name="toc-_002eword-expressions" href="Word.html#Word">7.110 <code>.word <var>expressions</var></code></a></li>
+    <li><a name="toc-_002ezero-size" href="Zero.html#Zero">7.111 <code>.zero <var>size</var></code></a></li>
+    <li><a name="toc-_002e2byte-expression-_005b_002c-expression_005d_002a" href="2byte.html#g_t2byte">7.112 <code>.2byte <var>expression</var> [, <var>expression</var>]*</code></a></li>
+    <li><a name="toc-_002e4byte-expression-_005b_002c-expression_005d_002a" href="4byte.html#g_t4byte">7.113 <code>.4byte <var>expression</var> [, <var>expression</var>]*</code></a></li>
+    <li><a name="toc-_002e8byte-expression-_005b_002c-expression_005d_002a" href="8byte.html#g_t8byte">7.114 <code>.8byte <var>expression</var> [, <var>expression</var>]*</code></a></li>
+    <li><a name="toc-Deprecated-Directives" href="Deprecated.html#Deprecated">7.115 Deprecated Directives</a></li>
   </ul></li>
   <li><a name="toc-Object-Attributes-1" href="Object-Attributes.html#Object-Attributes">8 Object Attributes</a>
   <ul class="no-bullet">
@@ -1061,8 +1063,8 @@ Next: <a href="Overview.html#Overview" accesskey="n" rel="next">Overview</a>, Up
 <h1 class="top">Using as</h1>
 
 <p>This file is a user guide to the <small>GNU</small> assembler <code>as</code>
-(GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16))
-version 2.35.1.
+(GNU Toolchain for the A-profile Architecture 10.3-2021.07 (arm-10.29))
+version 2.36.1.
 </p>
 <p>This document is distributed under the terms of the GNU Free
 Documentation License.  A copy of the license is included in the

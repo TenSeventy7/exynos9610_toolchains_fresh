@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Copyright (C) 1991-2020 Free Software Foundation, Inc.
+<!-- Copyright (C) 1991-2021 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -75,6 +75,7 @@ Next: <a href="objcopy.html#objcopy" accesskey="n" rel="next">objcopy</a>, Previ
    [<samp>-B</samp>|<samp>--format=bsd</samp>] [<samp>-C</samp>|<samp>--demangle</samp>[=<var>style</var>]]
    [<samp>-D</samp>|<samp>--dynamic</samp>] [<samp>-f</samp><var>format</var>|<samp>--format=</samp><var>format</var>]
    [<samp>-g</samp>|<samp>--extern-only</samp>] [<samp>-h</samp>|<samp>--help</samp>]
+   [<samp>--ifunc-chars=<var>CHARS</var></samp>]
    [<samp>-l</samp>|<samp>--line-numbers</samp>] [<samp>--inlines</samp>]
    [<samp>-n</samp>|<samp>-v</samp>|<samp>--numeric-sort</samp>]
    [<samp>-P</samp>|<samp>--portability</samp>] [<samp>-p</samp>|<samp>--no-sort</samp>]
@@ -85,7 +86,7 @@ Next: <a href="objcopy.html#objcopy" accesskey="n" rel="next">objcopy</a>, Previ
    [<samp>--plugin</samp> <var>name</var>]
    [<samp>--no-recurse-limit</samp>|<samp>--recurse-limit</samp>]]
    [<samp>--size-sort</samp>] [<samp>--special-syms</samp>]
-   [<samp>--synthetic</samp>] [<samp>--with-symbol-versions</samp>] [<samp>--target=</samp><var>bfdname</var>]
+   [<samp>--synthetic</samp>] [<samp>--target=</samp><var>bfdname</var>]
    [<var>objfile</var>&hellip;]
 </pre></div>
 
@@ -119,12 +120,15 @@ behavior is system dependent.
 </p>
 </dd>
 <dt><code>C</code></dt>
+<dt><code>c</code></dt>
 <dd><p>The symbol is common.  Common symbols are uninitialized data.  When
 linking, multiple common symbols may appear with the same name.  If the
 symbol is defined anywhere, the common symbols are treated as undefined
 references.
 For more details on common symbols, see the discussion of
 &ndash;warn-common in <a href="http://sourceware.org/binutils/docs/ld/Options.html#Options">Linker options</a> in <cite>The GNU linker</cite>.
+The lower case <var>c</var> character is used when the symbol is in a
+special section for small commons.
 </p>
 </dd>
 <dt><code>D</code></dt>
@@ -141,12 +145,21 @@ such as a global int variable as opposed to a large global array.
 </dd>
 <dt><code>i</code></dt>
 <dd><p>For PE format files this indicates that the symbol is in a section
-specific to the implementation of DLLs.  For ELF format files this
-indicates that the symbol is an indirect function.  This is a GNU
-extension to the standard set of ELF symbol types.  It indicates a
-symbol which if referenced by a relocation does not evaluate to its
-address, but instead must be invoked at runtime.  The runtime
-execution will then return the value to be used in the relocation.
+specific to the implementation of DLLs.
+</p>
+<p>For ELF format files this indicates that the symbol is an indirect
+function.  This is a GNU extension to the standard set of ELF symbol
+types.  It indicates a symbol which if referenced by a relocation does
+not evaluate to its address, but instead must be invoked at runtime.
+The runtime execution will then return the value to be used in the
+relocation.
+</p>
+<p>Note - the actual symbols display for GNU indirect symbols is
+controlled by the <samp>--ifunc-chars</samp> command line option.  If this
+option has been provided then the first character in the string will
+be used for global indirect function symbols.  If the string contains
+a second character then that will be used for local indirect function
+symbols.
 </p>
 </dd>
 <dt><code>I</code></dt>
@@ -223,7 +236,13 @@ the stab type.  Stabs symbols are used to hold debugging information.
 </p></dd>
 </dl>
 
-</li><li> The symbol name.
+</li><li> The symbol name.  If a symbol has version information associated with it,
+then the version information is displayed as well.  If the versioned
+symbol is undefined or hidden from linker, the version string is displayed
+as a suffix to the symbol name, preceded by an @ character.  For example
+&lsquo;<samp>foo@VER_1</samp>&rsquo;.  If the version is the default version to be used when
+resolving unversioned references to the symbol, then it is displayed as a
+suffix preceded by two @ characters.  For example &lsquo;<samp>foo@@VER_2</samp>&rsquo;.
 </li></ul>
 
 
@@ -276,7 +295,7 @@ for more information on demangling.
 <dt><code>--no-recursion-limit</code></dt>
 <dd><p>Enables or disables a limit on the amount of recursion performed
 whilst demangling strings.  Since the name mangling formats allow for
-an inifinite level of recursion it is possible to create strings whose
+an infinite level of recursion it is possible to create strings whose
 decoding will exhaust the amount of stack space available on the host
 machine, triggering a memory fault.  The limit tries to prevent this
 from happening by restricting recursion to 2048 levels of nesting.
@@ -314,6 +333,16 @@ either upper or lower case.
 <dt><code>-h</code></dt>
 <dt><code>--help</code></dt>
 <dd><p>Show a summary of the options to <code>nm</code> and exit.
+</p>
+</dd>
+<dt><code>--ifunc-chars=<var>CHARS</var></code></dt>
+<dd><p>When display GNU indirect function symbols <code>nm</code> will default
+to using the <code>i</code> character for both local indirect functions and
+global indirect functions.  The <samp>--ifunc-chars</samp> option allows
+the user to specify a string containing one or two characters. The
+first character will be used for global indirect function symbols and
+the second character, if present, will be used for local indirect
+function symbols.
 </p>
 </dd>
 <dt><code>-l</code></dt>
@@ -452,15 +481,6 @@ used to mark transitions between ARM code, THUMB code and data.
 <dd><p>Include synthetic symbols in the output.  These are special symbols
 created by the linker for various purposes.  They are not shown by
 default since they are not part of the binary&rsquo;s original source code.
-</p>
-</dd>
-<dt><code>--with-symbol-versions</code></dt>
-<dd><p>Enables the display of symbol version information if any exists.  The
-version string is displayed as a suffix to the symbol name, preceeded by
-an @ character.  For example &lsquo;<samp>foo@VER_1</samp>&rsquo;.  If the version is
-the default version to be used when resolving unversioned references
-to the symbol then it is displayed as a suffix preceeded by two @
-characters.  For example &lsquo;<samp>foo@@VER_2</samp>&rsquo;.
 </p>
 </dd>
 <dt><code>--target=<var>bfdname</var></code></dt>

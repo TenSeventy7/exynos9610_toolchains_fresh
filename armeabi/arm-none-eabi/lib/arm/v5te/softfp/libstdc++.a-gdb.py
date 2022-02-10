@@ -19,8 +19,8 @@ import gdb
 import os
 import os.path
 
-pythondir = '/tmp/dgboter/bbs/build09--cen7x86_64/buildbot/cen7x86_64--arm-none-eabi--a-profile/build/build-arm-none-eabi/install/share/gcc-10.2.1/python'
-libdir = '/tmp/dgboter/bbs/build09--cen7x86_64/buildbot/cen7x86_64--arm-none-eabi--a-profile/build/build-arm-none-eabi/install/arm-none-eabi/lib/arm/v5te/softfp'
+pythondir = '/data/jenkins/workspace/GNU-toolchain/arm-10/build-arm-none-eabi/install/share/gcc-10.3.1/python'
+libdir = '/data/jenkins/workspace/GNU-toolchain/arm-10/build-arm-none-eabi/install/arm-none-eabi/lib/arm/v5te/softfp'
 
 # This file might be loaded when there is no current objfile.  This
 # can happen if the user loads it manually.  In this case we don't

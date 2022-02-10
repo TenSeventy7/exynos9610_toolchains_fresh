@@ -2,7 +2,7 @@
 <html>
 <!-- This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2020 Free Software Foundation, Inc.
+Copyright (C) 1991-2021 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -66,15 +66,19 @@ ul.no-bullet {list-style: none}
 Next: <a href="Nops.html#Nops" accesskey="n" rel="next">Nops</a>, Previous: <a href="Nolist.html#Nolist" accesskey="p" rel="previous">Nolist</a>, Up: <a href="Pseudo-Ops.html#Pseudo-Ops" accesskey="u" rel="up">Pseudo Ops</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="AS-Index.html#AS-Index" title="Index" rel="index">Index</a>]</p>
 </div>
 <hr>
-<a name="g_t_002enop"></a>
-<h3 class="section">7.65 <code>.nop</code></h3>
+<a name="g_t_002enop-_005bsize_005d"></a>
+<h3 class="section">7.66 <code>.nop [<var>size</var>]</code></h3>
 
 <a name="index-nop-directive"></a>
 <a name="index-filling-memory-with-no_002dop-instructions"></a>
-<p>This directive emits a single no-op instruction.  It is provided on all
-architectures, allowing the creation of architecture neutral tests involving
-actual code.  The size of the generated instruction is target specific.  The
-instruction does affect the generation of DWARF debug line information.
+<p>This directive emits no-op instructions.  It is provided on all architectures,
+allowing the creation of architecture neutral tests involving actual code.  The
+size of the generated instruction is target specific, but if the optional
+<var>size</var> argument is given and resolves to an absolute positive value at that
+point in assembly (no forward expressions allowed) then the fewest no-op
+instructions are emitted that equal or exceed a total <var>size</var> in bytes.
+<code>.nop</code> does affect the generation of DWARF debug line information.
+Some targets do not support using <code>.nop</code> with <var>size</var>.
 </p>
 
 

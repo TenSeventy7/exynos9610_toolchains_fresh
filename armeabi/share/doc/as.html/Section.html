@@ -2,7 +2,7 @@
 <html>
 <!-- This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2020 Free Software Foundation, Inc.
+Copyright (C) 1991-2021 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -67,7 +67,7 @@ Next: <a href="Set.html#Set" accesskey="n" rel="next">Set</a>, Previous: <a href
 </div>
 <hr>
 <a name="g_t_002esection-name"></a>
-<h3 class="section">7.83 <code>.section <var>name</var></code></h3>
+<h3 class="section">7.84 <code>.section <var>name</var></code></h3>
 
 <a name="index-named-section"></a>
 <p>Use the <code>.section</code> directive to assemble the following code into a section
@@ -222,6 +222,10 @@ section) in the same file.
 <dt><code>?</code></dt>
 <dd><p>section is a member of the previously-current section&rsquo;s group, if any
 </p></dd>
+<dt><code>R</code></dt>
+<dd><p>retained section (apply SHF_GNU_RETAIN to prevent linker garbage
+collection, GNU ELF extension)
+</p></dd>
 <dt><code><code>&lt;number&gt;</code></code></dt>
 <dd><p>a numeric value indicating the bits to be set in the ELF section header&rsquo;s flags
 field.  Note - if one or more of the alphabetic characters described above is
@@ -238,7 +242,9 @@ a few exceptions to this rule however.  Processor and application specific
 flags can be added to an already defined section.  The <code>.interp</code>,
 <code>.strtab</code> and <code>.symtab</code> sections can have the allocate flag
 (<code>a</code>) set after they are initially defined, and the <code>.note-GNU-stack</code>
-section may have the executable (<code>x</code>) flag added.
+section may have the executable (<code>x</code>) flag added.  Also note that the
+<code>.attach_to_group</code> directive can be used to add a section to a group even
+if the section was not originally declared to be part of that group.
 </p>
 <p>The optional <var>type</var> argument may contain one of the following constants:
 </p>
@@ -301,11 +307,14 @@ which is a suffix of a larger string is considered a duplicate.  Thus
 must be present along with an additional field like this:
 </p>
 <div class="smallexample">
-<pre class="smallexample">.section <var>name</var>,&quot;<var>flags</var>&quot;o,@<var>type</var>,<var>SymbolName</var>
+<pre class="smallexample">.section <var>name</var>,&quot;<var>flags</var>&quot;o,@<var>type</var>,<var>SymbolName</var>|<var>SectionIndex</var>
 </pre></div>
 
 <p>The <var>SymbolName</var> field specifies the symbol name which the section
-references.
+references.  Alternatively a numeric <var>SectionIndex</var> can be provided.  This
+is not generally a good idea as section indicies are rarely known at assembly
+time, but the facility is provided for testing purposes.  An index of zero is
+allowed.  It indicates that the linked-to section has already been discarded.
 </p>
 <p>Note: If both the <var>M</var> and <var>o</var> flags are present, then the fields
 for the Merge flag should come first, like this:
