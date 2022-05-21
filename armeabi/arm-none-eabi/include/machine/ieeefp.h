@@ -87,9 +87,6 @@
 #  define __IEEE_BYTES_LITTLE_ENDIAN
 # endif
 #endif
-#ifndef __SOFTFP__
-# define _SUPPORTS_ERREXCEPT
-#endif
 #endif
 
 #if defined (__aarch64__)
@@ -99,9 +96,6 @@
 #define __IEEE_BIG_ENDIAN
 #endif
 #define __OBSOLETE_MATH_DEFAULT 0
-#ifdef __ARM_FP
-# define _SUPPORTS_ERREXCEPT
-#endif
 #endif
 
 #ifdef __epiphany__
@@ -195,18 +189,10 @@
 
 #ifdef __i386__
 #define __IEEE_LITTLE_ENDIAN
-# define _SUPPORTS_ERREXCEPT
 #endif
 
 #ifdef __riscv
-#if defined(__BYTE_ORDER__) && (__BYTE_ORDER__ == __ORDER_BIG_ENDIAN__)
-#define __IEEE_BIG_ENDIAN
-#else
 #define __IEEE_LITTLE_ENDIAN
-#endif
-#ifdef __riscv_flen
-# define _SUPPORTS_ERREXCEPT
-#endif
 #endif
 
 #ifdef __i960__
@@ -322,14 +308,6 @@
 #define __IEEE_LITTLE_ENDIAN
 #endif
 
-#ifdef __CSKY__
-#ifdef __CSKYBE__
-#define __IEEE_BIG_ENDIAN
-#else
-#define __IEEE_LITTLE_ENDIAN
-#endif
-#endif
-
 #ifdef __fr30__
 #define __IEEE_BIG_ENDIAN
 #endif
@@ -408,7 +386,6 @@
 
 #ifdef __x86_64__
 #define __IEEE_LITTLE_ENDIAN
-# define _SUPPORTS_ERREXCEPT
 #endif
 
 #ifdef __mep__
